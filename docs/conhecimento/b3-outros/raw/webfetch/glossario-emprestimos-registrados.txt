@@ -1,0 +1,7 @@
+FONTE: https://b3.com.br/data/files/32/02/C0/25/391EA810E9C1AAA8AC094EA8/Glossario%20_%20Emprestimos_Registrados.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+"Empréstimos de Ativos – Empréstimos Registrados-DD-MM-AAAA". v1 05/09/2023, v2 22/02/2024. BDI, seção Clearing. Diário, na abertura, dados de D-1, CSV.
+Inclui Registro, Neg. Eletrônica D+0, Neg. Eletrônica D+1, ETF de Renda Fixa; inclui renovações manuais (difere do Negócio a Negócio).
+Colunas (PT / EN): Data / Date (só em consulta por período); Ticker; ISIN; Empresa ou Fundo / Company or Fund; Mercado / Market; Número de Contratos / Number of Contracts; Quantidade de Ativos / Asset Amount; Valor em R$ / Value in BRL;
+Taxa Mínima doador / Minimum Rate Donor; Taxa Média ponderada doador / Average Rate Donor; Taxa Máxima doador / Maximum Rate Donor; Taxa Mínima tomador / Minimum Rate Taker; Taxa Média ponderada tomador / Average Rate Taker; Taxa Máxima tomador / Maximum Rate Taker.
+(Glossário ainda cita MTO; o CE 068/2024 tirou o filtro de outliers a partir de 18/11/2024.)

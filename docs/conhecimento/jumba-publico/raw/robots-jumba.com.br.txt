@@ -1,0 +1,6 @@
+# Fonte: https://jumba.com.br/robots.txt — acesso 2026-11-04 via WebFetch (texto devolvido pela ferramenta)
+User-agent: *
+Disallow: /i/
+
+# Influencer trial pages should not be indexed
+# These are private promotional pages for specific partners

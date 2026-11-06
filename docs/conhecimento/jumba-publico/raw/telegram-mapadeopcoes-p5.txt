@@ -1,0 +1,5 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=1808 — acesso 2026-11-04 via WebFetch (filtrado: só mensagens com ferramentas/metodologia/horários). Mensagens 1787–1806.
+1788 (23:30) live "Jumba Options" 07/05 20h30: projeção da plataforma Jumba para o IBOV, volatilidade e prêmios: "Será que a volatilidade está alta?"; "Quais papéis estão com o prêmio "gordo"..."
+1790 (23:31) vencimento séries E e Q; "Todas as opções que estiverem ITM (dentro do dinheiro) serão exercidas."; "Após as 14h45: A recompra da posição vendida zera sua obrigação automaticamente."
+1800 (19:14) vencimento séries F e R: exercício manual até 14h45; "Negociação das Opções - até às 15:45"; "Exercício Automático - às 18:15"; aftermarket 18h25–18h40
+Promoções (17): 1787, 1789, 1791–1799, 1801–1806

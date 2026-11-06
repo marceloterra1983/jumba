@@ -1,0 +1,2 @@
+# Fonte: https://t.me/robots.txt — acesso 2026-11-04 via WebFetch: falhou (client_error), nada retornado.
+# curl direto: bloqueado pelo proxy de saída (CONNECT 403) para jumba.com.br, t.me, youtube.com, hotmart.com.

@@ -1,0 +1,284 @@
+{
+ "arquivo_alvo": "/mnt/project-files/jumba/vetores/precificacao.json",
+ "gerado_em": "2026-11-04",
+ "gerado_por": "verificação independente: /tmp/verifica-precificacao/verifica.py e gera_correcoes.py",
+ "resumo": "Nenhum valor numérico de saidas_esperadas, entradas_gbs, limites ou tolerância de sigma está errado (82 casos, 1126 comparações, 0 fora da tolerância). As correções abaixo são de texto (campo nota). As sugestões de tolerância evitam falso negativo; não mudam nenhum valor esperado. O JSON original não foi alterado.",
+ "correcoes": [
+  {
+   "id": "IV-FALHA-C-ABAIXO-INTRINSECO",
+   "campo": "nota",
+   "atual": "1,90 < S - K = 2,00 < limite S - K·e^{-rT} = 2,3224.",
+   "proposto": "1,90 < S - K = 2,00 < limite S - K·e^{-rT} = 2,3222.",
+   "motivo": "S - K·e^(-rT) = 30 - 28·1,149^(-21/252) = 2.3222130331 (= limite_inferior do próprio caso)",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "IV-FALHA-C-ENTRE-INTRINSECO-E-LIMITE",
+   "campo": "nota",
+   "atual": "2,10 > S - K = 2,00, mas < S - K·e^{-rT} = 2,3224: também falha. Pega o motor que compara com o intrínseco simples.",
+   "proposto": "2,10 > S - K = 2,00, mas < S - K·e^{-rT} = 2,3222: também falha. Pega o motor que compara com o intrínseco simples.",
+   "motivo": "idem: limite_inferior = 2.3222130331",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "IV-1DU-ITM-C-PERTO-LIMITE",
+   "campo": "nota",
+   "atual": "1 DU, valor-tempo ~0,005 acima do limite S - K·e^{-rT} = 1,0154.",
+   "proposto": "1 DU, valor-tempo ~0,004 acima do limite S - K·e^{-rT} = 1,0160.",
+   "motivo": "limite_inferior = 1.0159791991; 1,02 - limite = 0.004021",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "IV-FALHA-1DU-ABAIXO-LIMITE",
+   "campo": "nota",
+   "atual": "1 DU: 1,01 > S - K = 1,00, mas < limite 1,0154.",
+   "proposto": "1 DU: 1,01 > S - K = 1,00, mas < limite 1,0160.",
+   "motivo": "limite_inferior = 1.0159791991",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "IV-FALHA-B76-ABAIXO-LIMITE",
+   "campo": "nota",
+   "atual": "Black-76: limite e^{-rT}(F - K) = 4.969,9; 4.950 fica abaixo.",
+   "proposto": "Black-76: limite e^{-rT}(F - K) = 4.969,97; 4.950 fica abaixo.",
+   "motivo": "limite_inferior = 4969.970930 (o texto truncou; arredondado em 1 casa seria 4.970,0)",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "HAUG-BS-P",
+   "campo": "nota",
+   "atual": "Call de 3 meses sobre ação sem dividendo.",
+   "proposto": "Put calculada sobre o exemplo de Haug (call de 3 meses sobre ação sem dividendo); a put não tem valor publicado.",
+   "motivo": "a nota do par C/P foi copiada e descreve a call num caso de put",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  },
+  {
+   "id": "HAUG-MERTON-C",
+   "campo": "nota",
+   "atual": "Put de 6 meses sobre índice com q = 5 % a.a.",
+   "proposto": "Call calculada sobre o exemplo de Haug (put de 6 meses sobre índice com q = 5 % a.a.); a call não tem valor publicado.",
+   "motivo": "a nota do par C/P foi copiada e descreve a put num caso de call",
+   "impacto_numerico": "nenhum (campo nota não é testado)"
+  }
+ ],
+ "sugestoes_tolerancia": {
+  "vega_em_sigma": {
+   "problema": "A vega_em_sigma usa a tolerância padrão (1e-10). Se o motor devolver sigma na borda da tolerância de sigma, a vega no sigma do motor muda |vomma|·tol_sigma, que passa de 1e-10 nestes casos. Alternativa: o teste avalia a vega no sigma esperado, e não no sigma do motor.",
+   "casos": [
+    {
+     "id": "IV-HULL-15.11",
+     "vega_em_sigma": 3.3062351841372664,
+     "vomma": 5.534833051020246,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 5.534833051020246e-10,
+     "tolerancia_atual": 3.3062351841372666e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-ITM-C-MODERADO",
+     "vega_em_sigma": 0.6454518442271818,
+     "vomma": 13.917777745066642,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 1.3917777745066644e-09,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-08,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-ITM-C-EXTREMO",
+     "vega_em_sigma": 9.455730716101664e-07,
+     "vomma": 0.0001248275940603088,
+     "tol_sigma": 1e-06,
+     "variacao_maxima_de_vega": 1.248275940603088e-10,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-P-ABAIXO-INTRINSECO-VALIDO",
+     "vega_em_sigma": 2.4580925688498536,
+     "vomma": 7.972244080949001,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 7.972244080949001e-10,
+     "tolerancia_atual": 2.458092568849854e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-OTM-C-PROFUNDO",
+     "vega_em_sigma": 0.7828328686831383,
+     "vomma": 17.894401213453033,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 1.7894401213453035e-09,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-08,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-OTM-P-B3",
+     "vega_em_sigma": 0.24465737919189046,
+     "vomma": 2.428595446728368,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 2.428595446728368e-10,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-1DU-OTM-C-TICK",
+     "vega_em_sigma": 0.3860846296879742,
+     "vomma": 1.210264653449627,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 1.2102646534496271e-10,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-1DU-OTM-P-TICK",
+     "vega_em_sigma": 0.16613655669746405,
+     "vomma": 1.570821912962255,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 1.570821912962255e-10,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    },
+    {
+     "id": "IV-1DU-ITM-C-PERTO-LIMITE",
+     "vega_em_sigma": 0.09594492898114611,
+     "vomma": 1.4502426064442162,
+     "tol_sigma": 1e-10,
+     "variacao_maxima_de_vega": 1.4502426064442163e-10,
+     "tolerancia_atual": 1e-10,
+     "proposto": {
+      "por_campo": {
+       "vega_em_sigma": {
+        "abs": 1e-09,
+        "rel": 0.0
+       }
+      }
+     }
+    }
+   ]
+  },
+  "criterio_de_parada_nota_06": {
+   "problema": "A nota 06 §3 para o Newton com |f| < 1e-10·max(1,P). Isso deixa um erro de sigma de até 1e-10·max(1,P)/vega, maior que a tolerância de sigma gravada nestes casos. O motor precisa de critério mais fino (por exemplo |Δσ| < 1e-13 ou um passo extra de Newton após |f| pequeno), ou a nota 06 precisa ser atualizada para bater com os vetores.",
+   "casos": [
+    {
+     "id": "IV-ITM-C-MODERADO",
+     "erro_sigma_que_a_parada_permite": 4.9190156442944565e-09,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-ITM-C-EXTREMO",
+     "erro_sigma_que_a_parada_permite": 0.005418354852040411,
+     "tol_sigma": 1e-06
+    },
+    {
+     "id": "IV-ITM-P-B3-EXTREMO",
+     "erro_sigma_que_a_parada_permite": 0.0002456023663709335,
+     "tol_sigma": 1e-07
+    },
+    {
+     "id": "IV-OTM-C-PROFUNDO",
+     "erro_sigma_que_a_parada_permite": 1.2774118716836389e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-OTM-C-EXTREMO",
+     "erro_sigma_que_a_parada_permite": 1.0584157941627374e-07,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-OTM-P-B3",
+     "erro_sigma_que_a_parada_permite": 4.087348615042904e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-1DU-ATM-C",
+     "erro_sigma_que_a_parada_permite": 1.3271713373016763e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-1DU-OTM-C-TICK",
+     "erro_sigma_que_a_parada_permite": 2.590105699903619e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-1DU-OTM-P-TICK",
+     "erro_sigma_que_a_parada_permite": 6.019144852153207e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-1DU-ITM-C-PERTO-LIMITE",
+     "erro_sigma_que_a_parada_permite": 1.0631098598243141e-09,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-VOL-ALTA",
+     "erro_sigma_que_a_parada_permite": 2.551056084108031e-10,
+     "tol_sigma": 1e-10
+    },
+    {
+     "id": "IV-GK-DOL",
+     "erro_sigma_que_a_parada_permite": 1.753396999514247e-10,
+     "tol_sigma": 1e-10
+    }
+   ]
+  }
+ },
+ "sugestoes_cobertura": [
+  "Não há vetor de prazo(agora, vencimento, calendario): DU e DC entram prontos. Incluir casos que cruzem 20/11, Carnaval, 24/12 e 31/12 usando feriados-b3-2026-2028.json, com DU de pregões e DU ANBIMA separados (ex.: 2026-12-01 a 2027-01-15: 29 pregões, 31 DU ANBIMA, 45 DC).",
+  "Não há vetor de GEX/DEX nem de escala() (gamma_1pct, cash_gamma_rs, delta_rs); o sinal das exposições não é testado por este arquivo."
+ ]
+}

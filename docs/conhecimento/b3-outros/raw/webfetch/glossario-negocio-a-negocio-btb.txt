@@ -1,0 +1,4 @@
+FONTE: https://b3.com.br/data/files/A6/C3/43/9D/3941B810E9C1AAA8AC094EA8/Negocio%20a%20Negocio%20-%20Emprestimos%20de%20Ativos%20-%20btb%202023.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+DD-MM-AAAA_NEGOCIOSBTB.zip (BTBTradeIntradayFile), CSV. Glossário 05/10/2023 (v2.1). Publicado no próprio dia, ao final. Sem renovações.
+Campos: ReportDate; TickerSymbol; UpdateAction (0 novo, 2 cancelado); InterestRateTermTrade (decimal, 1% = 0,01); TradeQuantity; EntryTime (HHMMSSNNN, UTC-3); TradeIdentification; TradeDate; TradingSessionIdentification (1 regular, 6 after); Market (10 vista, 30 termo, 70 OPC, 80 OPV...); LenderParticipantCode; BorrowerParticipantCode.

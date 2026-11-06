@@ -1,0 +1,4 @@
+FONTE: https://b3.com.br/data/files/3D/25/CE/4A/E9EBC910F37907C9AC094EA8/OC%20006-2026-VPE%20TRATAMENTO%20DE%20EVENTOS%20CORPORATIVOS%20EM%20RECURSOS%20FINANCEIROS%20LIQUIDOS%20DE%20IMPOSTOS_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 006/2026-VPE, 05/03/2026. Nova versão do MPO da Câmara em vigor em 09/03/2026. Cap. 7, seções 7.9, 7.9.1 item 1, 7.9.6 item 1.
+Muda a descrição da variável das fórmulas de eventos em recursos financeiros: valores "líquidos de impostos"; excluídas as tabelas de alíquotas (texto genérico para mudanças de alíquota).

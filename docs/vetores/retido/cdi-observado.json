@@ -1,0 +1,264 @@
+{
+ "titulo": "CDI do período: hipóteses para dois números observados (RETIDO)",
+ "status": "retido: números lidos em tela de terceiros; não usar em testes do motor até decisão do Marcelo",
+ "data": "2026-11-04",
+ "gerado_por": "geradores/analisar_cdi_observado.py",
+ "resultado": {
+  "venda_coberta": {
+   "alvo_pct": 0.3413,
+   "vencimento": "2026-11-13",
+   "nota": "9 dias corridos (dado do Marcelo)",
+   "prazo_D0_venc": {
+    "dc": 9,
+    "du": 7
+   },
+   "hipoteses_que_fecham": [
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "CDI_13_65",
+     "forma": "LIN360_DC",
+     "valor_pct": 0.34125,
+     "arred_half_up": 0.3413,
+     "arred_half_even": 0.3412,
+     "dif_pp": -5e-05
+    }
+   ],
+   "mais_proximas": [
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "CDI_13_65",
+     "forma": "LIN360_DC",
+     "valor_pct": 0.34125,
+     "arred_half_up": 0.3413,
+     "arred_half_even": 0.3412,
+     "dif_pp": -5e-05
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "CDI_13_65",
+     "forma": "COMP_DIARIA_360_DC",
+     "valor_pct": 0.341768020659574,
+     "arred_half_up": 0.3418,
+     "arred_half_even": 0.3418,
+     "dif_pp": 0.0004680206595739922
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "CDI_13_65",
+     "forma": "DESCONTO_LIN360_DC",
+     "valor_pct": 0.3400894447697233,
+     "arred_half_up": 0.3401,
+     "arred_half_even": 0.3401,
+     "dif_pp": -0.0012105552302766808
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "SELIC_META_13_75",
+     "forma": "DESCONTO_LIN360_DC",
+     "valor_pct": 0.34257240734973526,
+     "arred_half_up": 0.3426,
+     "arred_half_even": 0.3426,
+     "dif_pp": 0.001272407349735285
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "SELIC_META_13_75",
+     "forma": "COMP_DIARIA_365_DC",
+     "valor_pct": 0.33955242905194666,
+     "arred_half_up": 0.3396,
+     "arred_half_even": 0.3396,
+     "dif_pp": -0.0017475709480533493
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "SELIC_META_13_75",
+     "forma": "LIN365_DC",
+     "valor_pct": 0.339041095890411,
+     "arred_half_up": 0.339,
+     "arred_half_even": 0.339,
+     "dif_pp": -0.002258904109589041
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "SELIC_META_13_75",
+     "forma": "LIN360_DC",
+     "valor_pct": 0.34375,
+     "arred_half_up": 0.3438,
+     "arred_half_even": 0.3438,
+     "dif_pp": 0.00245
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 9,
+     "du": 7,
+     "taxa": "SELIC_META_13_75",
+     "forma": "COMP_DIARIA_360_DC",
+     "valor_pct": 0.3442756419160269,
+     "arred_half_up": 0.3443,
+     "arred_half_even": 0.3443,
+     "dif_pp": 0.002975641916026871
+    }
+   ],
+   "taxa_implicita_aa_por_forma": {
+    "LIN360_DC": 0.13652,
+    "LIN365_DC": 0.1384161111111111,
+    "LIN252_DU": 0.122868,
+    "EXP252_DU": 0.13049863083309107,
+    "EXP360_DC": 0.14601139022142856,
+    "EXP365_DC": 0.1481827097813449
+   },
+   "prazo_fracionario_com_13_65": {
+    "LIN360_dias_corridos": 9.001318681318681,
+    "EXP252_dias_uteis": 6.710348070638461
+   },
+   "n_hipoteses_testadas": 162
+  },
+  "cash_put": {
+   "alvo_pct": 0.5656,
+   "vencimento": "2026-11-19",
+   "nota": "15 dias corridos e 11 úteis (dado do Marcelo)",
+   "prazo_D0_venc": {
+    "dc": 15,
+    "du": 11
+   },
+   "hipoteses_que_fecham": [],
+   "mais_proximas": [
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "CDI_13_65",
+     "forma": "DESCONTO_LIN360_DC",
+     "valor_pct": 0.5655335280591635,
+     "arred_half_up": 0.5655,
+     "arred_half_even": 0.5655,
+     "dif_pp": -6.647194083649245e-05
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "SELIC_META_13_75",
+     "forma": "LIN365_DC",
+     "valor_pct": 0.565068493150685,
+     "arred_half_up": 0.5651,
+     "arred_half_even": 0.5651,
+     "dif_pp": -0.0005315068493150685
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "SELIC_META_13_75",
+     "forma": "COMP_DIARIA_365_DC",
+     "valor_pct": 0.5665610062107833,
+     "arred_half_up": 0.5666,
+     "arred_half_even": 0.5666,
+     "dif_pp": 0.0009610062107833168
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "SELIC_META_13_75",
+     "forma": "EXP252_DU",
+     "valor_pct": 0.5639499547436475,
+     "arred_half_up": 0.5639,
+     "arred_half_even": 0.5639,
+     "dif_pp": -0.0016500452563524874
+    },
+    {
+     "janela": "D1_liq_premio->venc_D1",
+     "dc": 18,
+     "du": 11,
+     "taxa": "SELIC_META_13_75",
+     "forma": "EXP252_DU",
+     "valor_pct": 0.5639499547436475,
+     "arred_half_up": 0.5639,
+     "arred_half_even": 0.5639,
+     "dif_pp": -0.0016500452563524874
+    },
+    {
+     "janela": "D2_liq_acao->venc_D2",
+     "dc": 18,
+     "du": 11,
+     "taxa": "SELIC_META_13_75",
+     "forma": "EXP252_DU",
+     "valor_pct": 0.5639499547436475,
+     "arred_half_up": 0.5639,
+     "arred_half_even": 0.5639,
+     "dif_pp": -0.0016500452563524874
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "CDI_13_65",
+     "forma": "LIN360_DC",
+     "valor_pct": 0.56875,
+     "arred_half_up": 0.5688,
+     "arred_half_even": 0.5688,
+     "dif_pp": 0.00315
+    },
+    {
+     "janela": "D0_leitura->vencimento",
+     "dc": 15,
+     "du": 11,
+     "taxa": "CDI_13_65",
+     "forma": "COMP_DIARIA_365_DC",
+     "valor_pct": 0.562429769358299,
+     "arred_half_up": 0.5624,
+     "arred_half_even": 0.5624,
+     "dif_pp": -0.0031702306417010096
+    }
+   ],
+   "taxa_implicita_aa_por_forma": {
+    "LIN360_DC": 0.135744,
+    "LIN365_DC": 0.13762933333333333,
+    "LIN252_DU": 0.12957381818181818,
+    "EXP252_DU": 0.13792765234342397,
+    "EXP360_DC": 0.14495067486078977,
+    "EXP365_DC": 0.1471052315667188
+   },
+   "prazo_fracionario_com_13_65": {
+    "LIN360_dias_corridos": 14.916923076923077,
+    "EXP252_dias_uteis": 11.107924827746912
+   },
+   "n_hipoteses_testadas": 162
+  },
+  "cash_put_parametro_P_sobre_K": {
+   "LIN360_DC": {
+    "base_pct": 0.56875,
+    "P_sobre_K_se_exibido_igual_base_vezes_(K-P)/K": 0.005538461538461538,
+    "P_sobre_K_se_exibido_igual_base_vezes_K/(K-P)": -0.005569306930693069
+   },
+   "LIN365_DC": {
+    "base_pct": 0.560958904109589,
+    "P_sobre_K_se_exibido_igual_base_vezes_(K-P)/K": -0.008273504273504274,
+    "P_sobre_K_se_exibido_igual_base_vezes_K/(K-P)": 0.008205615082056151
+   },
+   "EXP252_DU": {
+    "base_pct": 0.5600892579544092,
+    "P_sobre_K_se_exibido_igual_base_vezes_(K-P)/K": -0.009839042558533387,
+    "P_sobre_K_se_exibido_igual_base_vezes_K/(K-P)": 0.009743179005641473
+   }
+  },
+  "fecham_os_dois": []
+ }
+}

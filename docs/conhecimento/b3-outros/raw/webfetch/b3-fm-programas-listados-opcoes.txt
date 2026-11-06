@@ -1,0 +1,9 @@
+FONTES: https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/formador-de-mercado/programas-listados/ ; https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/formador-de-mercado/programas-listados/opcoes.htm
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Programas de opções: (1) Semanais sobre ações, units, ETFs e índices, 02/06/2025 a 26/02/2027, parâmetros: https://www.b3.com.br/data/files/65/E3/1E/FC/08180A105BF9020AAC094EA8/Opcao%20Semanal%20MM%20Parametros%20-%20Weekly%20Option%20Parameters%202026-09-04.xlsx ; OC 030-2026 PRE.
+(2) Mensais sobre ações e índices, 02/06/2025 a 26/02/2027, parâmetros: https://www.b3.com.br/data/files/C3/02/30/95/252F0A105BF9020AAC094EA8/Mensal%20Parametros%20-%20Monthly%20MM%20Parameter%202026-09-30.xlsx ; OC 031-2026 PRE.
+(3) VIX (VXBR), 08/12/2025 a 28/06/2027: https://www.b3.com.br/data/files/00/14/5D/25/66FDA9105B12E5A9AC094EA8/Derivativos%20de%20VIX%20FM%20-%20MM%20VIX%20Derivatives.xlsx
+Consolidado: https://www.b3.com.br/data/files/6D/D6/D0/C2/08281A10F2BF771AAC094EA8/Programa%20de%20FM%20Opcoes%20-%20Options%20MM%20Program%20-%20Out%2028%20-%202026.xlsx (WebFetch não lê xlsx: conteúdo não conferido).
+Séries obrigatórias: https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/formador-de-mercado/series-obrigatorias-de-atuacao/
+Mercado à vista: regras https://www.b3.com.br/data/files/DD/56/FD/0E/05451A108D00541AAC094EA8/Regras%20de%20Atuacao%20-%20Fm%20Autonomo%2026-27%20-%2015.10.xlsx (vigência 01/09/2026 a 31/08/2027).
+Nenhuma das páginas traz lista nominal de formadores por ativo.

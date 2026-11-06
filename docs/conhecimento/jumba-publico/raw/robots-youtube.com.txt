@@ -1,0 +1,2 @@
+# Fonte: https://www.youtube.com/robots.txt — acesso 2026-11-04 via WebFetch (resumo da ferramenta, não verbatim)
+User-agent: * — /watch permitido (só /watch_ajax e /watch_popup bloqueados); /feeds/videos.xml BLOQUEADO (não usar o RSS); /@canal/videos permitido; /shorts permitido.

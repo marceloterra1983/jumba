@@ -1,0 +1,12 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=1741 — acesso 2026-11-04 via WebFetch (filtrado). Mensagens 1721–1740.
+1721 (19:48) Rolagem de opções vendidas de PETR4: "Rolagem é o procedimento de encerramento da posição atual e remontagem no próximo vencimento."; dados do FYT; valor negativo = crédito
+1722 (19:49) Rolagem BOVA11: "A maximização da rolagem ocorre sobre os strikes próximos da linha do dinheiro (ATM)"; piora em ITM/OTM; custo de rolagem de puts vendidas ITM por juros e impossibilidade de exercício antecipado (puts europeias); fonte FYT
+1723 (20:02) "O FYT é um buscador com estratégias pré-definidas que auxilia os investidores de opções"; 48 estruturas para alta, baixa e lateral; filtros de débito, crédito e zero custo
+1726 Jumba Summit 2026, 28/03, Alphaville; volatilidade
+1727 Ibovespa após topo histórico em 05/12: "o que explodiu, na verdade, foi a volatilidade"
+1729/1730 Edward Thorp; origem de Black-Scholes
+1732 (11:38) vencimento séries L e X: exercício manual antecipado até 15:45; negociação até 16:45; automático 19:15; aftermarket 19:25–19:40 (horário deslocado +1h em relação aos outros meses); "Todas as opções que estiverem ITM (dentro do dinheiro) serão exercidas."
+1734 (21:12) setup WIN com divergências compradora e vendedora; "a midwall (163.900)"; "Jumba Wall em 163.385 pontos"
+1736 Princípios dos Hedges (Instagram)
+1737 (14:53) sala ao vivo 09/01/2026: setups com Jumba Walls; "o Jumba Trader Flow ao vivo, nosso rastreador do Smart Money"
+Demais: 1724, 1725, 1728, 1731, 1733, 1735, 1738, 1739, 1740

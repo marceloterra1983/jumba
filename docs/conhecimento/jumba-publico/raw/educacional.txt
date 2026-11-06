@@ -1,0 +1,3 @@
+# Fonte: https://jumba.com.br/c/educacional (rodapé "Jumba Knowledge") — acesso 2026-11-04 via WebFetch
+Resultado: tela de acesso/cadastro. Exige login ou cadastro gratuito ("Cadastro 100% gratuito", "Acesso a diversas ferramentas", "Sem cartão de crédito"). Sem artigos, aulas, categorias, News, Glossário, Suporte, FAQ ou blog visíveis sem login. Não prosseguimos (regra: sem login).
+Links: /, /register, /login, t.me/+wccjD27oNrBlYzcx, redes sociais, WhatsApp, /termos-de-uso, /quem-somos, /tradingview.

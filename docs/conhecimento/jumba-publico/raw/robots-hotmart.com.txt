@@ -1,0 +1,4 @@
+# Fonte: https://hotmart.com/robots.txt — acesso 2026-11-04 via WebFetch (resumo devolvido pela ferramenta; não verbatim)
+- Tudo permitido por padrão, com exceções: URLs com parâmetros initialSelectedCategory ou q, /blog/posts, busca do blog, /wp-admin/, arquivos PDF.
+- /pt-br/journey, /es/journey, /en/journey bloqueados ("Disallow: /pt-br/journey").
+- Nenhuma regra sobre /pt-br/marketplace/produtos. Sitemap do marketplace: /pt-br/marketplace/sitemap.xml.

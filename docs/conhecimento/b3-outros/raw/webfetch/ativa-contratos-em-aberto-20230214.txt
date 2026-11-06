@@ -1,0 +1,5 @@
+FONTE: https://acionista.com.br/wp-content/uploads/2023/02/Contratos-em-aberto-Ativa-Investimentos-14.02.23.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Relatório de corretora (terceiro) sobre contratos em aberto por tipo de participante em futuros, fonte "Contratos em aberto (B3)". Participantes: Bancos; DTVMs e Corretoras; Outras Jurídicas Financeiras; PJ Não Financeira; Investidor Institucional Nacional; Investidores Não Residentes; Pessoa Física; Banco Central.
+Mercados: DOL, WDO, DDI, SCS, DI1, DAP, futuro de Ibovespa e mini. Métrica: contratos em aberto comprado/vendido por participante, D e D-1.
+Indica que a B3 publica OI por tipo de participante em futuros; a página atual da B3 não foi localizada nesta coleta.

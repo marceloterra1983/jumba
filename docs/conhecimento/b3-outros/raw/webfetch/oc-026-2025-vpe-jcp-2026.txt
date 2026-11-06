@@ -1,0 +1,5 @@
+FONTE: https://www.b3.com.br/data/files/0F/23/BA/E4/1117B9105B12E5A9AC094EA8/OC 026-2025-VPE ATUALIZACAO NA TRIBUTACAO DE JCP DE CONTRATOS FUTUROS E OPCOES A PARTIR DE 2026_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 026/2025-VPE, 30/12/2025. Base: Lei Complementar 224 (26/12/2025). A partir de 01/01/2026: JCP em futuros e opções sobre renda variável usa alíquota de IR de 17,5% (fator 0,825). Também no ajuste de preço do à vista e dos índices B3.
+Empréstimo: eventos em dinheiro não alteram preço nem quantidade; reembolso conforme tributação do doador.
+Referências MPO: 7.9.1 (opções sobre à vista) e 7.9.6 (futuros de RV).

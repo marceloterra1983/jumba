@@ -1,0 +1,4 @@
+FONTE: https://b3.com.br/pt_br/produtos-e-servicos/negociacao/moedas/opcoes-sobre-taxa-de-cambio-de-reais-por-dolar-comercial.htm
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Código DOL. USD 50.000. Europeu. Prêmio em R$ por USD 1.000 (3 casas). Lote padrão 5.
+Data de vencimento: "1º dia útil do mês de vencimento do contrato." Último dia de negociação: sessão anterior ao vencimento. Todos os meses. Exercício automático se ITM (salvo intenção de não exercer).

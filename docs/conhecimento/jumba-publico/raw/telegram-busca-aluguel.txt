@@ -1,0 +1,18 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=aluguel — acesso 2026-11-04 via WebFetch (busca do canal; 2 passadas)
+1657 (14:43) "Teve um aumento da busca pelo aluguel."
+1047 (Black November 2023, cupom BLACK23) — lista do JUMBA PRO na ordem:
+ 1 Market Gamma e Market Gamma Bands (exemplificados em posts anteriores)
+ 2 Mapa de Opções: "mais de 80 ativos"
+ 3 "Maiores variações" e "Scanner de barreiras" (recursos do mapa)
+ 4 Shark Map: em tempo real, as maiores operações executadas na B3
+ 5 Shark Positions: estruturas com opções, pontas compradas e vendidas, custo de montagem e gráfico de payoff
+ 6 Jumba Walls: regiões de preço como suportes e resistências para day trade
+ 7 PCR: "demonstra o sentimento dos investidores, se estão buscando mais ou menos proteção via opções de venda"
+ 8 Fluxo de investimentos: "monitora o fluxo de entrada e saída por player: estrangeiro, institucional, pessoa física e instituição financeira"
+ 9 Curva de Volatilidade Implícita: "estima o preço teórico/justo de uma opção sem book de ofertas" (dentro e fora do dinheiro)
+ 10 Mercado de Aluguel: "taxas de aluguel dos ativos"
+ 11 Eventos Corporativos: "datas de divulgação de resultados trimestrais das empresas"
+ "E muito mais!". Bônus: Curso Básico de Opções, Curso Básico de Análise Técnica, materiais, Telegram, reuniões tira-dúvidas, suporte, 7 dias grátis.
+990 (19:04) quatro assinaturas: JUMBA PRO ("Conjunto de ferramentas para construção do cenário de direção do mercado"; Shark Map, Shark Positions, Market Gamma, Market Gamma Bands, Jumba Walls, Mapa de Opções, Curva de Volatilidade Implícita, Mercado de Aluguel, PCR, IQ do Ativo, "e muito mais"); FYT ("mais de 40 estratégias pré-definidas"); JUMBA INSIGHTS (relatórios com recomendações; produto "sendo reformulado"); JUMBA TRADER (IND/DOL; regiões de S/R intraday; Curso Básico de Análise Técnica)
+1045, 1712 listas com Mercado de Aluguel
+Sem taxas, fonte B3, defasagem do fluxo ou datas.

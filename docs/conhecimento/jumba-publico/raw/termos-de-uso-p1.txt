@@ -1,0 +1,23 @@
+# Fonte: https://jumba.com.br/termos-de-uso — acesso 2026-11-04 via WebFetch (passada 1; citações curtas devolvidas pela ferramenta)
+Título: Termos de Uso (JUMBA FYT, para usuários dos Produtos e Ferramentas). "Endereço atualizado em 07/04/2025". Sem nº de versão.
+JUMBA FYT TECNOLOGIA LTDA, CNPJ 45.023.631/0001-64, Al Rio Negro, 503, Sala 2020, Alphaville Industrial, Barueri (SP), CEP 06454-000.
+Cláusulas: 1 Aceitação; 2 Licença limitada (vedações: prints, acesso fora de navegador, extração de dados; uso profissional); 3 Alterações e rescisão; 4 Consentimento para coleta e uso de dados; 5 Isenção de garantias; 6 Informação de mercado; 7 Defeitos nos produtos; 8 Feedback; 9 Suporte; 10 Grupos de Telegram; 11 Assinatura e cancelamento; 12 Penalidades; 13 Disposições gerais (direitos autorais, marcas, contratação eletrônica).
+Literais:
+- Cl.2 item 3: "O acesso aos dados por ferramentas próprias ou de terceiros com a finalidade de baixar os dados"
+- Cl.2 item 2: "O acesso sem que seja feito através de um navegador como Google Chrome"
+- Cl.2: "a cópia de textos, imagens ou quaisquer partes nele contido é expressamente proibida"
+- Cl.2 item 1: "O compartilhamento de “PRINTS DE TELA” sem prévia autorização"
+- Cl.13: "É vedado ao usuário a cópia, reprodução ( em todo ou parte )"
+- Cl.6 item 4: "O USUÁRIO não redistribuirá ou facilitará a redistribuição de informações do mercado"
+- Cl.2: "engenharia reversa"
+- Cl.2: "O USUÁRIO não terá acesso aos códigos fonte dos Produtos ou Ferramentas"
+- Cl.13: "As marcas registradas, marcas de design, nomes de Produtos ou nomes de domínio da JUMBA FYT"; "O USUÁRIO não pode utilizar quaisquer Marcas da JUMBA FYT"
+- Cl.8: "A JUMBA FYT será a proprietária de qualquer informação e dados que Usuários fornecerem"
+- Cl.2: "usando de forma exclusiva suas próprias as credenciais de acesso"; "sendo proibido o compartilhamento"
+- Cl.10: "O usuário não pode passar o acesso para terceiros"
+- Cl.2: "O uso desta plataforma não é permitido para pessoas com perfil de uso profissional"
+- Cl.12: "arcará com multa correspondente a 03 (três) mensalidades"; item 1: "Multa correspondentes a 12 (doze) mensalidade última vigente"; item 2: "01 (uma) mensalidade per capita de cada membro do grupo"
+Fonte de dados: "Market Data Bovespa e BM&F"; informações "são fornecidas pela Cedro Technologies"; "podendo sua prestação de serviços ser substituída por outra empresa".
+"A informação do mercado pode tornar-se rapidamente não confiável"; não garante "a precisão, a pontualidade, a integridade".
+Suporte "entre 09h00 e 17h00". Dados "não são aconselhamentos ou sugestões de investimento"; "não aceitará qualquer responsabilidade por perdas e/ou danos".
+Sem cláusula de foro/lei aplicável. Citados: Código Penal art. 184, CDC art. 49, LGPD.

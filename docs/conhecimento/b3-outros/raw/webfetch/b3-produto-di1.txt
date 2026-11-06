@@ -1,0 +1,4 @@
+FONTE: https://b3.com.br/pt_br/produtos-e-servicos/negociacao/juros/futuro-de-taxa-media-de-depositos-interfinanceiros-de-um-dia.htm
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+DI1: cotação taxa efetiva anual base 252, 3 casas. 100.000 pontos, ponto = R$1. Tick 0,001 (até 3 meses) / 0,005 (acima). Vencimento: primeira sessão de negociação do mês. Último dia: sessão anterior. Todos os meses. Liquidação financeira. Lote 1.
+Preço de ajuste: VWAP de 10 minutos, 16h10-16h20. Manual de apreçamento: https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/mercado-de-derivativos/metodologia/manual-de-aprecamento-da-b3/

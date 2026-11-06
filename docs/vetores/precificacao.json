@@ -1,0 +1,4303 @@
+{
+ "descricao": "Vetores de teste do motor de precificação de opções (BSM-Merton, Black-76, Garman-Kohlhagen, gregas e vol implícita). Ver precificacao.md.",
+ "versao": 1,
+ "gerado_em": "2026-11-04",
+ "gerador": "geradores/gera_precificacao.py",
+ "regra_tolerancia": "|obtido - esperado| <= max(abs, rel*|esperado|); usar tolerancia.por_campo quando existir, senão tolerancia.padrao. sigma null = deve falhar.",
+ "convencoes": {
+  "modelo": "Black-Scholes generalizado com custo de carregamento b (entradas_gbs)",
+  "tempo_b3": "T = DU/252",
+  "taxa_b3": "r = ln(1 + DI_aa), DI base 252 exponencial",
+  "cupom_b3": "q = (252/DU)*ln(1 + cupom_lin_aa*DC/360)",
+  "theta": "theta_ano = dV/dt = -dV/dT; theta_du = theta_ano/252; theta_dc = theta_ano/365",
+  "vega": "por 1,00 de vol; vega_pp = vega/100",
+  "rho": "BSM: dV/dr com q fixo; BLACK76: -T*V com F fixo; GK: dV/dr_d. rho_q: dV/dq ou dV/dr_f",
+  "rho_di_pp": "rho/(100*(1+DI_aa))",
+  "theta_1du_exato": "V(T-1/252) - V(T), taxas contínuas e sigma fixos",
+  "vol_implicita_falha": "sigma null, falha true, flags [FORA_DOS_LIMITES]"
+ },
+ "casos": [
+  {
+   "id": "HULL-BSM-EX15.6-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 42.0,
+    "K": 40.0,
+    "T": 0.5,
+    "r": 0.1,
+    "q": 0.0,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 42.0,
+    "K": 40.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.1,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 4.759422392871533,
+    "d1": 0.7692626281060314,
+    "d2": 0.6278412718687219,
+    "delta": 0.779131290942669,
+    "gamma": 0.04996267040591185,
+    "vega": 8.813415059602852,
+    "vega_pp": 0.08813415059602851,
+    "theta_ano": -4.559092194592626,
+    "theta_du": -0.018091635692827884,
+    "theta_dc": -0.012490663546829114,
+    "rho": 13.982045913360281,
+    "rho_pp": 0.1398204591336028
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 15 (The Black-Scholes-Merton Model), Example 15.6",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 4.76,
+     "d1": 0.7693,
+     "d2": 0.6278
+    },
+    "tolerancia_publicado": {
+     "preco": 0.005,
+     "d1": 5e-05,
+     "d2": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Acao sem dividendo. Hull arredonda N(d1) e N(d2) em 4 casas."
+  },
+  {
+   "id": "HULL-BSM-EX15.6-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "P",
+    "S": 42.0,
+    "K": 40.0,
+    "T": 0.5,
+    "r": 0.1,
+    "q": 0.0,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 42.0,
+    "K": 40.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.1,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 0.8085993729000935,
+    "d1": 0.7692626281060314,
+    "d2": 0.6278412718687219,
+    "delta": -0.22086870905733105,
+    "gamma": 0.04996267040591185,
+    "vega": 8.813415059602852,
+    "vega_pp": 0.08813415059602851,
+    "theta_ano": -0.7541744965897704,
+    "theta_du": -0.0029927559388482953,
+    "theta_dc": -0.0020662314975062207,
+    "rho": -5.042542576653999,
+    "rho_pp": -0.05042542576653999
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 15 (The Black-Scholes-Merton Model), Example 15.6",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 0.81
+    },
+    "tolerancia_publicado": {
+     "preco": 0.005
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Acao sem dividendo. Hull arredonda N(d1) e N(d2) em 4 casas."
+  },
+  {
+   "id": "HULL-GREGAS-CAP19-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 49.0,
+    "K": 50.0,
+    "T": 0.38461538461538464,
+    "T_expr": "20/52",
+    "r": 0.05,
+    "q": 0.0,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 49.0,
+    "K": 50.0,
+    "T": 0.38461538461538464,
+    "r": 0.05,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 2.4005273232717146,
+    "d1": 0.054181351923835816,
+    "d2": -0.06985338266537264,
+    "delta": 0.5216046610663964,
+    "gamma": 0.0655440393478444,
+    "vega": 12.1054798826288,
+    "vega_pp": 0.121054798826288,
+    "theta_ano": -4.305329822932573,
+    "theta_du": -0.017084642154494338,
+    "theta_dc": -0.01179542417241801,
+    "rho": 8.90696194960835,
+    "rho_pp": 0.0890696194960835
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 19 (The Greek Letters), exemplo da call vendida (100.000 opções, 20 semanas) usado nos exemplos de delta, theta, gamma, vega e rho",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 2.4,
+     "d1": 0.0542,
+     "delta": 0.522,
+     "gamma": 0.066,
+     "vega": 12.1,
+     "theta_ano": -4.31,
+     "theta_dc": -0.0118,
+     "theta_du": -0.0171,
+     "rho": 8.91
+    },
+    "tolerancia_publicado": {
+     "preco": 0.005,
+     "d1": 5e-05,
+     "delta": 0.0005,
+     "gamma": 0.0005,
+     "vega": 0.05,
+     "theta_ano": 0.005,
+     "theta_dc": 5e-05,
+     "theta_du": 5e-05,
+     "rho": 0.005
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "T = 20/52 (Hull escreve 0,3846). Hull: theta -4,31/ano = -0,0118 por dia corrido (/365) = -0,0171 por dia de negociação (/252); vega 12,1 por 1,00 (0,121 por 1 p.p.); rho 8,91 por 1,00 (0,0891 por 1 p.p.). Preço publicado: 'cerca de US$ 240.000' para 100.000 opções."
+  },
+  {
+   "id": "HULL-GREGAS-CAP19-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "P",
+    "S": 49.0,
+    "K": 50.0,
+    "T": 0.38461538461538464,
+    "T_expr": "20/52",
+    "r": 0.05,
+    "q": 0.0,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 49.0,
+    "K": 50.0,
+    "T": 0.38461538461538464,
+    "r": 0.05,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 2.4481754412818493,
+    "d1": 0.054181351923835816,
+    "d2": -0.06985338266537264,
+    "delta": -0.4783953389336036,
+    "gamma": 0.0655440393478444,
+    "vega": 12.1054798826288,
+    "vega_pp": 0.121054798826288,
+    "theta_ano": -1.8529474170320666,
+    "theta_du": -0.007352965940603439,
+    "theta_dc": -0.005076568265841279,
+    "rho": -9.957518095780165,
+    "rho_pp": -0.09957518095780164
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 19 (The Greek Letters), exemplo da call vendida (100.000 opções, 20 semanas) usado nos exemplos de delta, theta, gamma, vega e rho",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "T = 20/52 (Hull escreve 0,3846). Hull: theta -4,31/ano = -0,0118 por dia corrido (/365) = -0,0171 por dia de negociação (/252); vega 12,1 por 1,00 (0,121 por 1 p.p.); rho 8,91 por 1,00 (0,0891 por 1 p.p.). Preço publicado: 'cerca de US$ 240.000' para 100.000 opções."
+  },
+  {
+   "id": "HULL-INDICE-EX17.1-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 930.0,
+    "K": 900.0,
+    "T": 0.16666666666666666,
+    "T_expr": "2/12",
+    "r": 0.08,
+    "q": 0.03,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 930.0,
+    "K": 900.0,
+    "T": 0.16666666666666666,
+    "r": 0.08,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 51.83295679649085,
+    "d1": 0.5444785750253215,
+    "d2": 0.4628289169325489,
+    "delta": 0.7034180086011917,
+    "gamma": 0.0045074038616943375,
+    "vega": 129.94845333264777,
+    "vega_pp": 1.2994845333264775,
+    "theta_ano": -106.53137285582481,
+    "theta_du": -0.42274354307866985,
+    "theta_dc": -0.2918667749474652,
+    "rho": 100.39096520043626,
+    "rho_pp": 1.0039096520043624,
+    "rho_q": -109.02979133318473
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 17 (Options on Stock Indices and Currencies), Example 17.1",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 51.83
+    },
+    "tolerancia_publicado": {
+     "preco": 0.005
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Dividend yield de 0,2 % no 1º mês e 0,3 % no 2º: q = 0,5 %/(2/12) = 3 % a.a. Hull imprime d1 = 0,5444 (truncado; o exato arredonda para 0,5445), por isso d1 não entra como publicado."
+  },
+  {
+   "id": "HULL-INDICE-EX17.1-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "P",
+    "S": 930.0,
+    "K": 900.0,
+    "T": 0.16666666666666666,
+    "T_expr": "2/12",
+    "r": 0.08,
+    "q": 0.03,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 930.0,
+    "K": 900.0,
+    "T": 0.16666666666666666,
+    "r": 0.08,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 14.550996773772443,
+    "d1": 0.5444785750253215,
+    "d2": 0.4628289169325489,
+    "delta": -0.2915944705914905,
+    "gamma": 0.0045074038616943375,
+    "vega": 129.94845333264777,
+    "vega_pp": 1.2994845333264775,
+    "theta_ano": -63.24584937518255,
+    "theta_du": -0.25097559275866094,
+    "theta_dc": -0.1732762996580344,
+    "rho": -47.622309070643105,
+    "rho_pp": -0.47622309070643104,
+    "rho_q": 45.19714294168103
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 17 (Options on Stock Indices and Currencies), Example 17.1",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Dividend yield de 0,2 % no 1º mês e 0,3 % no 2º: q = 0,5 %/(2/12) = 3 % a.a. Hull imprime d1 = 0,5444 (truncado; o exato arredonda para 0,5445), por isso d1 não entra como publicado."
+  },
+  {
+   "id": "HULL-FUTURO-CAP18-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "F": 20.0,
+    "K": 20.0,
+    "T": 0.3333333333333333,
+    "T_expr": "4/12",
+    "r": 0.09,
+    "sigma": 0.25
+   },
+   "entradas_gbs": {
+    "S": 20.0,
+    "K": 20.0,
+    "T": 0.3333333333333333,
+    "r": 0.09,
+    "b": 0.0,
+    "sigma": 0.25,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 1.1166414565589435,
+    "d1": 0.07216878364870322,
+    "d2": -0.07216878364870322,
+    "delta": 0.5131388031882277,
+    "gamma": 0.13376450266134562,
+    "vega": 4.458816755378187,
+    "vega_pp": 0.04458816755378187,
+    "theta_ano": -1.5715585521765152,
+    "theta_du": -0.0062363434610179175,
+    "theta_dc": -0.004305639868976754,
+    "rho": -0.37221381885298116,
+    "rho_pp": -0.0037221381885298114
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 18 (Futures Options), exemplo da put europeia sobre futuro de petróleo",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Black-76 com prêmio pago à vista (descontado por e^{-rT})."
+  },
+  {
+   "id": "HULL-FUTURO-CAP18-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "P",
+    "F": 20.0,
+    "K": 20.0,
+    "T": 0.3333333333333333,
+    "T_expr": "4/12",
+    "r": 0.09,
+    "sigma": 0.25
+   },
+   "entradas_gbs": {
+    "S": 20.0,
+    "K": 20.0,
+    "T": 0.3333333333333333,
+    "r": 0.09,
+    "b": 0.0,
+    "sigma": 0.25,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 1.1166414565589435,
+    "d1": 0.07216878364870322,
+    "d2": -0.07216878364870322,
+    "delta": -0.4573067303602805,
+    "gamma": 0.13376450266134562,
+    "vega": 4.458816755378187,
+    "vega_pp": 0.04458816755378187,
+    "theta_ano": -1.5715585521765152,
+    "theta_du": -0.0062363434610179175,
+    "theta_dc": -0.004305639868976754,
+    "rho": -0.37221381885298116,
+    "rho_pp": -0.0037221381885298114
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 18 (Futures Options), exemplo da put europeia sobre futuro de petróleo",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 1.12
+    },
+    "tolerancia_publicado": {
+     "preco": 0.005
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Black-76 com prêmio pago à vista (descontado por e^{-rT})."
+  },
+  {
+   "id": "HAUG-BS-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 60.0,
+    "K": 65.0,
+    "T": 0.25,
+    "r": 0.08,
+    "q": 0.0,
+    "sigma": 0.3
+   },
+   "entradas_gbs": {
+    "S": 60.0,
+    "K": 65.0,
+    "T": 0.25,
+    "r": 0.08,
+    "b": 0.08,
+    "sigma": 0.3
+   },
+   "saidas_esperadas": {
+    "preco": 2.1333684449162,
+    "d1": -0.32528471782357615,
+    "d2": -0.4752847178235762,
+    "delta": 0.37248279796197287,
+    "gamma": 0.04204275575378517,
+    "vega": 11.351544053521996,
+    "vega_pp": 0.11351544053521996,
+    "theta_ano": -8.428174386737371,
+    "theta_du": -0.03344513645530703,
+    "theta_dc": -0.02309088873078732,
+    "rho": 5.053899858200543,
+    "rho_pp": 0.05053899858200543
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1 (Black-Scholes-Merton), exemplo do Black-Scholes 1973",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 2.1334
+    },
+    "tolerancia_publicado": {
+     "preco": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Call de 3 meses sobre ação sem dividendo."
+  },
+  {
+   "id": "HAUG-BS-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 60.0,
+    "K": 65.0,
+    "T": 0.25,
+    "r": 0.08,
+    "q": 0.0,
+    "sigma": 0.3
+   },
+   "entradas_gbs": {
+    "S": 60.0,
+    "K": 65.0,
+    "T": 0.25,
+    "r": 0.08,
+    "b": 0.08,
+    "sigma": 0.3
+   },
+   "saidas_esperadas": {
+    "preco": 5.8462822098552945,
+    "d1": -0.32528471782357615,
+    "d2": -0.4752847178235762,
+    "delta": -0.6275172020380272,
+    "gamma": 0.04204275575378517,
+    "vega": 11.351544053521996,
+    "vega_pp": 0.11351544053521996,
+    "theta_ano": -3.3311412855422438,
+    "theta_du": -0.013218814625167634,
+    "theta_dc": -0.009126414480937654,
+    "rho": -10.874328583034231,
+    "rho_pp": -0.1087432858303423
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1 (Black-Scholes-Merton), exemplo do Black-Scholes 1973",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Call de 3 meses sobre ação sem dividendo."
+  },
+  {
+   "id": "HAUG-MERTON-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 100.0,
+    "K": 95.0,
+    "T": 0.5,
+    "r": 0.1,
+    "q": 0.05,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 95.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 9.628983522021256,
+    "d1": 0.6101857363236403,
+    "d2": 0.46876438008633076,
+    "delta": 0.7111283123922603,
+    "gamma": 0.022839574296269993,
+    "vega": 22.83957429626999,
+    "vega_pp": 0.2283957429626999,
+    "theta_ano": -7.160658069013174,
+    "theta_du": -0.028415309797671325,
+    "theta_dc": -0.0196182412849676,
+    "rho": 30.741923858602384,
+    "rho_pp": 0.3074192385860238,
+    "rho_q": -35.55641561961301
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Merton 1973 (índice com dividend yield)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put de 6 meses sobre índice com q = 5 % a.a."
+  },
+  {
+   "id": "HAUG-MERTON-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 100.0,
+    "K": 95.0,
+    "T": 0.5,
+    "r": 0.1,
+    "q": 0.05,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 95.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.05,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 2.464787646755821,
+    "d1": 0.6101857363236403,
+    "d2": 0.46876438008633076,
+    "delta": -0.2641815996360724,
+    "gamma": 0.022839574296269993,
+    "vega": 22.83957429626999,
+    "vega_pp": 0.2283957429626999,
+    "theta_ano": -3.000528096398054,
+    "theta_du": -0.011906857525389104,
+    "theta_dc": -0.008220624921638504,
+    "rho": -14.44147380518153,
+    "rho_pp": -0.14441473805181532,
+    "rho_q": 13.20907998180362
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Merton 1973 (índice com dividend yield)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 2.4648
+    },
+    "tolerancia_publicado": {
+     "preco": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Put de 6 meses sobre índice com q = 5 % a.a."
+  },
+  {
+   "id": "HAUG-BLACK76-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "F": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "sigma": 0.28
+   },
+   "entradas_gbs": {
+    "S": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "b": 0.0,
+    "sigma": 0.28,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 1.7010507252362672,
+    "d1": 0.12124355652982141,
+    "d2": -0.12124355652982141,
+    "delta": 0.5086362359336519,
+    "gamma": 0.07974503467912114,
+    "vega": 6.045471079024174,
+    "vega_pp": 0.060454710790241735,
+    "theta_ano": -0.9583828622275524,
+    "theta_du": -0.003803106596141081,
+    "theta_dc": -0.0026257064718563077,
+    "rho": -1.2757880439272002,
+    "rho_pp": -0.012757880439272003
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Black-76 (opção sobre futuro)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 1.7011
+    },
+    "tolerancia_publicado": {
+     "preco": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "No dinheiro (F = K): call e put têm o mesmo preço."
+  },
+  {
+   "id": "HAUG-BLACK76-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "F": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "sigma": 0.28
+   },
+   "entradas_gbs": {
+    "S": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "b": 0.0,
+    "sigma": 0.28,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 1.7010507252362672,
+    "d1": 0.12124355652982141,
+    "d2": -0.12124355652982141,
+    "delta": -0.419107250394901,
+    "gamma": 0.07974503467912114,
+    "vega": 6.045471079024174,
+    "vega_pp": 0.060454710790241735,
+    "theta_ano": -0.9583828622275524,
+    "theta_du": -0.003803106596141081,
+    "theta_dc": -0.0026257064718563077,
+    "rho": -1.2757880439272002,
+    "rho_pp": -0.012757880439272003
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Black-76 (opção sobre futuro)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 1.7011
+    },
+    "tolerancia_publicado": {
+     "preco": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "No dinheiro (F = K): call e put têm o mesmo preço."
+  },
+  {
+   "id": "HAUG-GK-C",
+   "grupo": "preco_gregas",
+   "modelo": "GARMAN_KOHLHAGEN",
+   "modelo_motor": "GK",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 1.56,
+    "K": 1.6,
+    "T": 0.5,
+    "r_d": 0.06,
+    "r_f": 0.08,
+    "sigma": 0.12
+   },
+   "entradas_gbs": {
+    "S": 1.56,
+    "K": 1.6,
+    "T": 0.5,
+    "r": 0.06,
+    "b": -0.02,
+    "sigma": 0.12
+   },
+   "saidas_esperadas": {
+    "preco": 0.02909925314943968,
+    "d1": -0.3737979518344032,
+    "d2": -0.4586507655767889,
+    "delta": 0.3403859092321428,
+    "gamma": 2.700266083546168,
+    "vega": 0.39428205245507725,
+    "vega_pp": 0.003942820524550772,
+    "theta_ano": -0.03494785073760003,
+    "theta_du": -0.0001386819473714287,
+    "theta_dc": -9.574753626739735e-05,
+    "rho": 0.2509513826263515,
+    "rho_pp": 0.002509513826263515,
+    "rho_q": -0.2655010092010714,
+    "F_paridade": 1.5444777406487022
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Garman-Kohlhagen (opção de moeda)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "preco": 0.0291
+    },
+    "tolerancia_publicado": {
+     "preco": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "r_d = taxa doméstica, r_f = taxa estrangeira."
+  },
+  {
+   "id": "HAUG-GK-P",
+   "grupo": "preco_gregas",
+   "modelo": "GARMAN_KOHLHAGEN",
+   "modelo_motor": "GK",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 1.56,
+    "K": 1.6,
+    "T": 0.5,
+    "r_d": 0.06,
+    "r_f": 0.08,
+    "sigma": 0.12
+   },
+   "entradas_gbs": {
+    "S": 1.56,
+    "K": 1.6,
+    "T": 0.5,
+    "r": 0.06,
+    "b": -0.02,
+    "sigma": 0.12
+   },
+   "saidas_esperadas": {
+    "preco": 0.08298058174942856,
+    "d1": -0.3737979518344032,
+    "d2": -0.4586507655767889,
+    "delta": -0.6204035299201804,
+    "gamma": 2.700266083546168,
+    "vega": 0.39428205245507725,
+    "vega_pp": 0.003942820524550772,
+    "theta_ano": -0.061691601523153186,
+    "theta_du": -0.0002448079425521952,
+    "theta_dc": -0.00016901808636480325,
+    "rho": -0.525405044212455,
+    "rho_pp": -0.00525405044212455,
+    "rho_q": 0.4839147533377407,
+    "F_paridade": 1.5444777406487022
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 1, exemplo do Garman-Kohlhagen (opção de moeda)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "r_d = taxa doméstica, r_f = taxa estrangeira."
+  },
+  {
+   "id": "HAUG-DELTA-B76-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "F": 105.0,
+    "K": 100.0,
+    "T": 0.5,
+    "r": 0.1,
+    "sigma": 0.36
+   },
+   "entradas_gbs": {
+    "S": 105.0,
+    "K": 100.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.0,
+    "sigma": 0.36,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 12.432844508202189,
+    "d1": 0.3189450869436357,
+    "d2": 0.06438664571647859,
+    "delta": 0.5946286597299956,
+    "gamma": 0.01349363711052063,
+    "vega": 26.77812284582819,
+    "vega_pp": 0.2677812284582819,
+    "theta_ano": -8.396839773677929,
+    "theta_du": -0.0333207927526902,
+    "theta_dc": -0.023005040475829946,
+    "rho": -6.2164222541010945,
+    "rho_pp": -0.06216422254101094
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2 (gregas), exemplo de delta de opção sobre futuro (b = 0)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "delta": 0.5946
+    },
+    "tolerancia_publicado": {
+     "delta": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Delta em relação a F, já com o desconto e^{-rT}."
+  },
+  {
+   "id": "HAUG-DELTA-B76-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "F": 105.0,
+    "K": 100.0,
+    "T": 0.5,
+    "r": 0.1,
+    "sigma": 0.36
+   },
+   "entradas_gbs": {
+    "S": 105.0,
+    "K": 100.0,
+    "T": 0.5,
+    "r": 0.1,
+    "b": 0.0,
+    "sigma": 0.36,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 7.676697385698619,
+    "d1": 0.3189450869436357,
+    "d2": 0.06438664571647859,
+    "delta": -0.3566007647707184,
+    "gamma": 0.01349363711052063,
+    "vega": 26.77812284582819,
+    "vega_pp": 0.2677812284582819,
+    "theta_ano": -8.872454485928287,
+    "theta_du": -0.03520815272193765,
+    "theta_dc": -0.024308094481995307,
+    "rho": -3.8383486928493094,
+    "rho_pp": -0.038383486928493096
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2 (gregas), exemplo de delta de opção sobre futuro (b = 0)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "delta": -0.3566
+    },
+    "tolerancia_publicado": {
+     "delta": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Delta em relação a F, já com o desconto e^{-rT}."
+  },
+  {
+   "id": "HAUG-GAMMA-VEGA-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 55.0,
+    "K": 60.0,
+    "T": 0.75,
+    "r": 0.1,
+    "q": 0.0,
+    "sigma": 0.3
+   },
+   "entradas_gbs": {
+    "S": 55.0,
+    "K": 60.0,
+    "T": 0.75,
+    "r": 0.1,
+    "b": 0.1,
+    "sigma": 0.3
+   },
+   "saidas_esperadas": {
+    "preco": 5.392778824120155,
+    "d1": 0.08367199897899365,
+    "d2": -0.17613562215633793,
+    "delta": 0.5333413896834848,
+    "gamma": 0.027821160476940842,
+    "vega": 18.935777349617858,
+    "vega_pp": 0.1893577734961786,
+    "theta_ano": -6.181255230770723,
+    "theta_du": -0.024528790598296518,
+    "theta_dc": -0.01693494583772801,
+    "rho": 17.95574820635363,
+    "rho_pp": 0.17955748206353628
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplos de gamma e de vega (mesmos parâmetros)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "gamma": 0.0278,
+     "vega": 18.9358
+    },
+    "tolerancia_publicado": {
+     "gamma": 5e-05,
+     "vega": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Gamma e vega iguais para call e put."
+  },
+  {
+   "id": "HAUG-GAMMA-VEGA-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 55.0,
+    "K": 60.0,
+    "T": 0.75,
+    "r": 0.1,
+    "q": 0.0,
+    "sigma": 0.3
+   },
+   "entradas_gbs": {
+    "S": 55.0,
+    "K": 60.0,
+    "T": 0.75,
+    "r": 0.1,
+    "b": 0.1,
+    "sigma": 0.3
+   },
+   "saidas_esperadas": {
+    "preco": 6.057388003833329,
+    "d1": 0.08367199897899365,
+    "d2": -0.17613562215633793,
+    "delta": -0.4666586103165153,
+    "gamma": 0.027821160476940842,
+    "vega": 18.935777349617858,
+    "vega_pp": 0.1893577734961786,
+    "theta_ano": -0.6147943127994051,
+    "theta_du": -0.0024396599714262106,
+    "theta_dc": -0.0016843679802723427,
+    "rho": -23.79270867843125,
+    "rho_pp": -0.2379270867843125
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplos de gamma e de vega (mesmos parâmetros)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "gamma": 0.0278,
+     "vega": 18.9358
+    },
+    "tolerancia_publicado": {
+     "gamma": 5e-05,
+     "vega": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Gamma e vega iguais para call e put."
+  },
+  {
+   "id": "HAUG-THETA-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 430.0,
+    "K": 405.0,
+    "T": 0.0833,
+    "r": 0.07,
+    "q": 0.05,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 430.0,
+    "K": 405.0,
+    "T": 0.0833,
+    "r": 0.07,
+    "b": 0.02,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 27.323477913973605,
+    "d1": 1.0953972792500277,
+    "d2": 1.0376738004913806,
+    "delta": 0.8597404010297689,
+    "gamma": 0.008784688077380687,
+    "vega": 27.0606518329581,
+    "vega_pp": 0.27060651832958105,
+    "theta_ano": -37.966900505031646,
+    "theta_du": -0.1506623035913954,
+    "theta_dc": -0.10401890549323738,
+    "rho": 28.518995714251293,
+    "rho_pp": 0.28518995714251294,
+    "rho_q": -30.795041424485294
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplo de theta (índice, b = r - q = 0,02)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "T = 0,0833 exatamente como publicado (não 1/12). Theta por ano."
+  },
+  {
+   "id": "HAUG-THETA-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 430.0,
+    "K": 405.0,
+    "T": 0.0833,
+    "r": 0.07,
+    "q": 0.05,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 430.0,
+    "K": 405.0,
+    "T": 0.0833,
+    "r": 0.07,
+    "b": 0.02,
+    "sigma": 0.2
+   },
+   "saidas_esperadas": {
+    "preco": 1.75602018393571,
+    "d1": 1.0953972792500277,
+    "d2": 1.0376738004913806,
+    "delta": -0.13610326055339386,
+    "gamma": 0.008784688077380687,
+    "vega": 27.0606518329581,
+    "vega_pp": 0.27060651832958105,
+    "theta_ano": -31.192367056519096,
+    "theta_du": -0.12377923435126625,
+    "theta_dc": -0.08545853988087423,
+    "rho": -5.021359171083859,
+    "rho_pp": -0.0502135917108386,
+    "rho_q": 4.875082689762015
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplo de theta (índice, b = r - q = 0,02)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "theta_ano": -31.1924
+    },
+    "tolerancia_publicado": {
+     "theta_ano": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "T = 0,0833 exatamente como publicado (não 1/12). Theta por ano."
+  },
+  {
+   "id": "HAUG-RHO-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "S": 72.0,
+    "K": 75.0,
+    "T": 1.0,
+    "r": 0.09,
+    "q": 0.0,
+    "sigma": 0.19
+   },
+   "entradas_gbs": {
+    "S": 72.0,
+    "K": 75.0,
+    "T": 1.0,
+    "r": 0.09,
+    "b": 0.09,
+    "sigma": 0.19
+   },
+   "saidas_esperadas": {
+    "preco": 7.222751948241906,
+    "d1": 0.3538316077881309,
+    "d2": 0.16383160778813088,
+    "delta": 0.6382674578551525,
+    "gamma": 0.027392888344874317,
+    "vega": 26.98089930416741,
+    "vega_pp": 0.26980899304167405,
+    "theta_ano": -6.04911088545552,
+    "theta_du": -0.02400440827561714,
+    "theta_dc": -0.016572906535494574,
+    "rho": 38.732505017329075,
+    "rho_pp": 0.3873250501732907
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplo de rho",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "rho": 38.7325
+    },
+    "tolerancia_publicado": {
+     "rho": 5e-05
+    },
+    "regra_publicado": "o valor publicado é arredondado: confere com saidas_esperadas dentro de meia unidade da última casa"
+   },
+   "nota": "Rho por 1,00 de taxa contínua."
+  },
+  {
+   "id": "HAUG-RHO-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "P",
+    "S": 72.0,
+    "K": 75.0,
+    "T": 1.0,
+    "r": 0.09,
+    "q": 0.0,
+    "sigma": 0.19
+   },
+   "entradas_gbs": {
+    "S": 72.0,
+    "K": 75.0,
+    "T": 1.0,
+    "r": 0.09,
+    "b": 0.09,
+    "sigma": 0.19
+   },
+   "saidas_esperadas": {
+    "preco": 3.7675908435840206,
+    "d1": 0.3538316077881309,
+    "d2": 0.16383160778813088,
+    "delta": -0.3617325421448475,
+    "gamma": 0.027392888344874317,
+    "vega": 26.98089930416741,
+    "vega_pp": 0.26980899304167405,
+    "theta_ano": 0.11992461512527014,
+    "theta_du": 0.0004758913298621831,
+    "theta_dc": 0.00032856058938430177,
+    "rho": -29.812333878013042,
+    "rho_pp": -0.2981233387801304
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL), cap. 2, exemplo de rho",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Rho por 1,00 de taxa contínua."
+  },
+  {
+   "id": "B3-ACAO-REF-21DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "sigma": 0.35
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "sigma": 0.35
+   },
+   "saidas_esperadas": {
+    "preco": 0.5646945184011872,
+    "d1": -0.5047776481147309,
+    "d2": -0.6058139452229154,
+    "delta": 0.30685750832394354,
+    "gamma": 0.11587297830060764,
+    "vega": 3.0416656803909503,
+    "vega_pp": 0.030416656803909505,
+    "theta_ano": -7.261986488366065,
+    "theta_du": -0.02881740669986534,
+    "theta_dc": -0.01989585339278374,
+    "rho": 0.7200858942764267,
+    "rho_pp": 0.007200858942764266,
+    "rho_q": -0.767143770809859,
+    "rho_di_pp": 0.006507780336885916,
+    "theta_1du_exato": -0.02896937465053571
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/05 §3 (6 casas)"
+   },
+   "nota": "Mesmo vetor da nota 05 da metodologia, agora com 1e-10. Ação protegida contra proventos: q = 0 (BS_B3)."
+  },
+  {
+   "id": "B3-ACAO-REF-21DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "sigma": 0.35
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "sigma": 0.35
+   },
+   "saidas_esperadas": {
+    "preco": 2.2959576247982336,
+    "d1": -0.5047776481147309,
+    "d2": -0.6058139452229154,
+    "delta": -0.6931424916760565,
+    "gamma": 0.11587297830060764,
+    "vega": 3.0416656803909503,
+    "vega_pp": 0.030416656803909505,
+    "theta_ano": -4.050722991073869,
+    "theta_du": -0.016074297583626464,
+    "theta_dc": -0.011097871208421558,
+    "rho": -1.9241860312566605,
+    "rho_pp": -0.019241860312566604,
+    "rho_q": 1.732856229190141,
+    "rho_di_pp": -0.017389842126133398,
+    "theta_1du_exato": -0.016223706408782564
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/05 §3 (6 casas)"
+   },
+   "nota": "Mesmo vetor da nota 05 da metodologia, agora com 1e-10. Ação protegida contra proventos: q = 0 (BS_B3)."
+  },
+  {
+   "id": "B3-ACAO-ATM-10DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 38.42,
+    "K": 38.0,
+    "q": 0.0,
+    "DU": 10,
+    "DI_aa": 0.149,
+    "sigma": 0.31
+   },
+   "entradas_gbs": {
+    "S": 38.42,
+    "K": 38.0,
+    "T": 0.03968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.31
+   },
+   "saidas_esperadas": {
+    "preco": 1.286364182842925,
+    "d1": 0.2981262182184895,
+    "d2": 0.2363727400695458,
+    "delta": 0.6171965841681549,
+    "gamma": 0.1608390131169323,
+    "vega": 2.9205676728115684,
+    "vega_pp": 0.029205676728115686,
+    "theta_ano": -14.522574933842431,
+    "theta_du": -0.057629265610485834,
+    "theta_dc": -0.039787876531075156,
+    "rho": 0.8899336738451423,
+    "rho_pp": 0.008899336738451424,
+    "rho_q": -0.9409798715770045,
+    "rho_di_pp": 0.007745288719278872,
+    "theta_1du_exato": -0.05882776275968098
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Perto do dinheiro, 10 dias úteis."
+  },
+  {
+   "id": "B3-ACAO-ATM-10DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 38.42,
+    "K": 38.0,
+    "q": 0.0,
+    "DU": 10,
+    "DI_aa": 0.149,
+    "sigma": 0.31
+   },
+   "entradas_gbs": {
+    "S": 38.42,
+    "K": 38.0,
+    "T": 0.03968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.31
+   },
+   "saidas_esperadas": {
+    "preco": 0.6574999824566709,
+    "d1": 0.2981262182184895,
+    "d2": 0.2363727400695458,
+    "delta": -0.3828034158318451,
+    "gamma": 0.1608390131169323,
+    "vega": 2.9205676728115684,
+    "vega_pp": 0.029205676728115686,
+    "theta_ano": -9.273688543194249,
+    "theta_du": -0.036800351361881936,
+    "theta_dc": -0.025407365871765064,
+    "rho": -0.6097145721712761,
+    "rho_pp": -0.006097145721712762,
+    "rho_q": 0.5836233030261702,
+    "rho_di_pp": -0.005306480175555058,
+    "theta_1du_exato": -0.03799310743746084
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Perto do dinheiro, 10 dias úteis."
+  },
+  {
+   "id": "B3-ACAO-1DU-ATM-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 30.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.4
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 30.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.4
+   },
+   "saidas_esperadas": {
+    "preco": 0.30981817534867034,
+    "d1": 0.03447224958231578,
+    "d2": 0.009274618048367298,
+    "delta": 0.5137497145915652,
+    "gamma": 0.5274375510724917,
+    "vega": 0.7534822158178452,
+    "vega_pp": 0.007534822158178452,
+    "theta_ano": -40.073144154863336,
+    "theta_du": -0.15902041331294975,
+    "theta_dc": -0.10978943604072146,
+    "rho": 0.059931243104755096,
+    "rho_pp": 0.000599312431047551,
+    "rho_q": -0.06116068030851966,
+    "rho_di_pp": 0.0005215948050892524,
+    "theta_1du_exato": -0.30981817534867034
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prazo de 1 dia útil; theta_1du_exato = intrínseco - preço."
+  },
+  {
+   "id": "B3-ACAO-1DU-ATM-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 30.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.4
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 30.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.4
+   },
+   "saidas_esperadas": {
+    "preco": 0.2932879693809194,
+    "d1": 0.03447224958231578,
+    "d2": 0.009274618048367298,
+    "delta": -0.48625028540843485,
+    "gamma": 0.5274375510724917,
+    "vega": 0.7534822158178452,
+    "vega_pp": 0.007534822158178452,
+    "theta_ano": -35.90868010221331,
+    "theta_du": -0.14249476231037028,
+    "theta_dc": -0.09837994548551593,
+    "rho": -0.059050779887436365,
+    "rho_pp": -0.0005905077988743637,
+    "rho_q": 0.057886938739099385,
+    "rho_di_pp": -0.0005139319398384366,
+    "theta_1du_exato": -0.2932879693809194
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prazo de 1 dia útil; theta_1du_exato = intrínseco - preço."
+  },
+  {
+   "id": "B3-ACAO-1DU-K31-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 31.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.55
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 31.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.55
+   },
+   "saidas_esperadas": {
+    "preco": 0.10027571501092687,
+    "d1": -0.91317285889293,
+    "d2": -0.9478196022521092,
+    "delta": 0.18057581800467026,
+    "gamma": 0.2529592917271916,
+    "vega": 0.49688432303555496,
+    "vega_pp": 0.00496884323035555,
+    "theta_ano": -35.17257218115761,
+    "theta_du": -0.13957369913157783,
+    "theta_dc": -0.09636321145522635,
+    "rho": 0.02109920168702056,
+    "rho_pp": 0.00021099201687020558,
+    "rho_q": -0.021497121191032174,
+    "rho_di_pp": 0.00018363099814639301,
+    "theta_1du_exato": -0.10027571501092687
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 dia útil: call fora do dinheiro, put dentro."
+  },
+  {
+   "id": "B3-ACAO-1DU-K31-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 31.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.55
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 31.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "sigma": 0.55
+   },
+   "saidas_esperadas": {
+    "preco": 1.0831945021775842,
+    "d1": -0.91317285889293,
+    "d2": -0.9478196022521092,
+    "delta": -0.8194241819953297,
+    "gamma": 0.2529592917271916,
+    "vega": 0.49688432303555496,
+    "vega_pp": 0.00496884323035555,
+    "theta_ano": -30.86929266008593,
+    "theta_du": -0.12249719309557908,
+    "theta_dc": -0.08457340454818062,
+    "rho": -0.10184888873824395,
+    "rho_pp": -0.0010184888873824396,
+    "rho_q": 0.09755049785658687,
+    "rho_di_pp": -0.0008864133049455523,
+    "theta_1du_exato": -0.08319450217758424
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 dia útil: call fora do dinheiro, put dentro."
+  },
+  {
+   "id": "B3-ACAO-126DU-K26-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 20.0,
+    "K": 26.0,
+    "q": 0.0,
+    "DU": 126,
+    "DI_aa": 0.1435,
+    "sigma": 0.45
+   },
+   "entradas_gbs": {
+    "S": 20.0,
+    "K": 26.0,
+    "T": 0.5,
+    "r": 0.13409373448069878,
+    "b": 0.13409373448069878,
+    "sigma": 0.45
+   },
+   "saidas_esperadas": {
+    "preco": 1.1492578438576189,
+    "d1": -0.4547243345131088,
+    "d2": -0.7729223860470552,
+    "delta": 0.3246537858722951,
+    "gamma": 0.056530405764458815,
+    "vega": 5.087736518801293,
+    "vega_pp": 0.05087736518801293,
+    "theta_ano": -3.0060539285147416,
+    "theta_du": -0.011928785430614054,
+    "theta_dc": -0.008235764187711622,
+    "rho": 2.6719089367941415,
+    "rho_pp": 0.02671908936794142,
+    "rho_q": -3.246537858722951,
+    "rho_di_pp": 0.023366059788317812,
+    "theta_1du_exato": -0.011931088514741704
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put europeia muito dentro do dinheiro, 126 DU: o preço europeu fica abaixo de K - S."
+  },
+  {
+   "id": "B3-ACAO-126DU-K26-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 20.0,
+    "K": 26.0,
+    "q": 0.0,
+    "DU": 126,
+    "DI_aa": 0.1435,
+    "sigma": 0.45
+   },
+   "entradas_gbs": {
+    "S": 20.0,
+    "K": 26.0,
+    "T": 0.5,
+    "r": 0.13409373448069878,
+    "b": 0.13409373448069878,
+    "sigma": 0.45
+   },
+   "saidas_esperadas": {
+    "preco": 5.4631935248427475,
+    "d1": -0.4547243345131088,
+    "d2": -0.7729223860470552,
+    "delta": -0.6753462141277049,
+    "gamma": 0.056530405764458815,
+    "vega": 5.087736518801293,
+    "vega_pp": 0.05087736518801293,
+    "theta_ano": 0.25429250687206617,
+    "theta_du": 0.0010090972494923261,
+    "theta_dc": 0.0006966917996494964,
+    "rho": -9.485058903698423,
+    "rho_pp": -0.09485058903698422,
+    "rho_q": 6.753462141277049,
+    "rho_di_pp": -0.08294760737821096,
+    "theta_1du_exato": 0.0010102370160941909
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put europeia muito dentro do dinheiro, 126 DU: o preço europeu fica abaixo de K - S."
+  },
+  {
+   "id": "B3-INDICE-BSMQ-42DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 145000.0,
+    "K": 147000.0,
+    "q": 0.045,
+    "DU": 42,
+    "DI_aa": 0.1475,
+    "sigma": 0.21
+   },
+   "entradas_gbs": {
+    "S": 145000.0,
+    "K": 147000.0,
+    "T": 0.16666666666666666,
+    "r": 0.13758566295256316,
+    "b": 0.09258566295256317,
+    "sigma": 0.21
+   },
+   "saidas_esperadas": {
+    "preco": 5042.028605625208,
+    "d1": 0.0630696889679749,
+    "d2": -0.022662452029436345,
+    "delta": 0.5212206436602301,
+    "gamma": 3.1789040543945984e-05,
+    "vega": 23392.76021027625,
+    "vega_pp": 233.9276021027625,
+    "theta_ano": -21041.0741156307,
+    "theta_du": -83.49632585567738,
+    "theta_dc": -57.64677839898822,
+    "rho": 11755.827454184695,
+    "rho_pp": 117.55827454184694,
+    "rho_q": -12596.165555122228,
+    "rho_di_pp": 102.4472980756836,
+    "theta_1du_exato": -83.83924983300153
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "BSM-Merton com q contínuo (índice à vista ou opção não protegida); T e r na convenção B3. q = 4,5 % a.a. é ilustrativo, não é dado da B3."
+  },
+  {
+   "id": "B3-INDICE-BSMQ-42DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BSM_Q",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 145000.0,
+    "K": 147000.0,
+    "q": 0.045,
+    "DU": 42,
+    "DI_aa": 0.1475,
+    "sigma": 0.21
+   },
+   "entradas_gbs": {
+    "S": 145000.0,
+    "K": 147000.0,
+    "T": 0.16666666666666666,
+    "r": 0.13758566295256316,
+    "b": 0.09258566295256317,
+    "sigma": 0.21
+   },
+   "saidas_esperadas": {
+    "preco": 4792.966557340068,
+    "d1": 0.0630696889679749,
+    "d2": -0.022662452029436345,
+    "delta": -0.4713074111589083,
+    "gamma": 3.1789040543945984e-05,
+    "vega": 23392.76021027625,
+    "vega_pp": 233.9276021027625,
+    "theta_ano": -7750.730629265391,
+    "theta_du": -30.756867576449963,
+    "theta_dc": -21.234878436343536,
+    "rho": -12188.756862563627,
+    "rho_pp": -121.88756862563628,
+    "rho_q": 11389.929103006949,
+    "rho_di_pp": -106.2201033774608,
+    "theta_1du_exato": -31.080669562467943
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "BSM-Merton com q contínuo (índice à vista ou opção não protegida); T e r na convenção B3. q = 4,5 % a.a. é ilustrativo, não é dado da B3."
+  },
+  {
+   "id": "B3-IND-B76-15DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "F": 130000.0,
+    "K": 132000.0,
+    "DU": 15,
+    "DI_aa": 0.1065,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 130000.0,
+    "K": 132000.0,
+    "T": 0.05952380952380952,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "sigma": 0.2,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 1663.5718122474739,
+    "d1": -0.2884925686659854,
+    "d2": -0.33728757231341205,
+    "delta": 0.3841637028997511,
+    "gamma": 5.996564101310286e-05,
+    "vega": 12064.515870493313,
+    "vega_pp": 120.64515870493312,
+    "theta_ano": -20100.030066667612,
+    "theta_du": -79.76202407407781,
+    "theta_dc": -55.06857552511674,
+    "rho": -99.02213168139725,
+    "rho_pp": -0.9902213168139725,
+    "rho_di_pp": -0.8949130743912991,
+    "theta_1du_exato": -81.04224547859134
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/03 §4 (2 casas no preço)"
+   },
+   "nota": "Opção sobre futuro de índice (pontos). Mesmo vetor da nota 03."
+  },
+  {
+   "id": "B3-IND-B76-15DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "F": 130000.0,
+    "K": 132000.0,
+    "DU": 15,
+    "DI_aa": 0.1065,
+    "sigma": 0.2
+   },
+   "entradas_gbs": {
+    "S": 130000.0,
+    "K": 132000.0,
+    "T": 0.05952380952380952,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "sigma": 0.2,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 3651.560184204472,
+    "d1": -0.2884925686659854,
+    "d2": -0.33728757231341205,
+    "delta": -0.6098304830787481,
+    "gamma": 5.996564101310286e-05,
+    "vega": 12064.515870493313,
+    "vega_pp": 120.64515870493312,
+    "theta_ano": -19898.841904995603,
+    "theta_du": -78.96365835315716,
+    "theta_dc": -54.51737508217973,
+    "rho": -217.35477286931382,
+    "rho_pp": -2.1735477286931384,
+    "rho_di_pp": -1.964344987522041,
+    "theta_1du_exato": -80.24371942646205
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/03 §4 (2 casas no preço)"
+   },
+   "nota": "Opção sobre futuro de índice (pontos). Mesmo vetor da nota 03."
+  },
+  {
+   "id": "B3-IND-B76-1DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "F": 150000.0,
+    "K": 150000.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.18
+   },
+   "entradas_gbs": {
+    "S": 150000.0,
+    "K": 150000.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.0,
+    "sigma": 0.18,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 678.1595279118927,
+    "d1": 0.0056694670951384085,
+    "d2": -0.0056694670951384085,
+    "delta": 0.5019850283269105,
+    "gamma": 0.0002344230041302042,
+    "vega": 3767.512566378282,
+    "vega_pp": 37.675125663782815,
+    "theta_ano": -85352.99407307731,
+    "theta_du": -338.70235743284644,
+    "theta_dc": -233.843819378294,
+    "rho": -2.691109237745606,
+    "rho_pp": -0.02691109237745606,
+    "rho_di_pp": -0.02342131625540127,
+    "theta_1du_exato": -678.1595279118927
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Black-76 no dinheiro com 1 dia útil."
+  },
+  {
+   "id": "B3-IND-B76-1DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "F": 150000.0,
+    "K": 150000.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "sigma": 0.18
+   },
+   "entradas_gbs": {
+    "S": 150000.0,
+    "K": 150000.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.0,
+    "sigma": 0.18,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 678.1595279118927,
+    "d1": 0.0056694670951384085,
+    "d2": -0.0056694670951384085,
+    "delta": -0.4974639648074978,
+    "gamma": 0.0002344230041302042,
+    "vega": 3767.512566378282,
+    "vega_pp": 37.675125663782815,
+    "theta_ano": -85352.99407307731,
+    "theta_du": -338.70235743284644,
+    "theta_dc": -233.843819378294,
+    "rho": -2.691109237745606,
+    "rho_pp": -0.02691109237745606,
+    "rho_di_pp": -0.02342131625540127,
+    "theta_1du_exato": -678.1595279118927
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Black-76 no dinheiro com 1 dia útil."
+  },
+  {
+   "id": "B3-DOL-GK-20DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "GARMAN_KOHLHAGEN",
+   "modelo_motor": "GK",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 5.4,
+    "K": 5.5,
+    "DU": 20,
+    "DC": 28,
+    "DI_aa": 0.1065,
+    "cupom_lin_aa": 0.05,
+    "sigma": 0.14
+   },
+   "entradas_gbs": {
+    "S": 5.4,
+    "K": 5.5,
+    "T": 0.07936507936507936,
+    "r": 0.10120188050896729,
+    "b": 0.05229691198851464,
+    "sigma": 0.14
+   },
+   "saidas_esperadas": {
+    "preco": 0.052240309025766214,
+    "d1": -0.340279699022335,
+    "d2": -0.3797202309096658,
+    "delta": 0.36540194433554796,
+    "gamma": 1.760939182399172,
+    "vega": 0.5705442950973317,
+    "vega_pp": 0.005705442950973317,
+    "theta_ano": -0.6011239747101501,
+    "theta_du": -0.0023854125980561514,
+    "theta_dc": -0.0016469149992058907,
+    "rho": 0.15245477701477722,
+    "rho_pp": 0.0015245477701477722,
+    "rho_q": -0.1566008332866634,
+    "rho_di_pp": 0.0013778109084028667,
+    "theta_1du_exato": -0.002403291014404719,
+    "F_paridade": 5.422459539743449
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/04 §3 (6 casas)"
+   },
+   "nota": "Dólar à vista em R$/US$ (multiplique o prêmio por 1.000 para cotar em R$ por US$ 1.000). q = (252/DU)·ln(1 + cupom·DC/360), Manual B3 §2.1."
+  },
+  {
+   "id": "B3-DOL-GK-20DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "GARMAN_KOHLHAGEN",
+   "modelo_motor": "GK",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 5.4,
+    "K": 5.5,
+    "DU": 20,
+    "DC": 28,
+    "DI_aa": 0.1065,
+    "cupom_lin_aa": 0.05,
+    "sigma": 0.14
+   },
+   "entradas_gbs": {
+    "S": 5.4,
+    "K": 5.5,
+    "T": 0.07936507936507936,
+    "r": 0.10120188050896729,
+    "b": 0.05229691198851464,
+    "sigma": 0.14
+   },
+   "saidas_esperadas": {
+    "preco": 0.12916046686243804,
+    "d1": -0.340279699022335,
+    "d2": -0.3797202309096658,
+    "delta": -0.6307242316467431,
+    "gamma": 1.760939182399172,
+    "vega": 0.5705442950973317,
+    "vega_pp": 0.005705442950973317,
+    "theta_ano": -0.31203016613210416,
+    "theta_du": -0.0012382149449686672,
+    "theta_dc": -0.0008548771674852169,
+    "rho": -0.28056121569482945,
+    "rho_pp": -0.0028056121569482945,
+    "rho_q": 0.2703103849914613,
+    "rho_di_pp": -0.0025355735715755032,
+    "theta_1du_exato": -0.0012557546353279326,
+    "F_paridade": 5.422459539743449
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "consistencia": "metodologia/04 §3 (6 casas)"
+   },
+   "nota": "Dólar à vista em R$/US$ (multiplique o prêmio por 1.000 para cotar em R$ por US$ 1.000). q = (252/DU)·ln(1 + cupom·DC/360), Manual B3 §2.1."
+  },
+  {
+   "id": "B3-DOL-B76-EQUIV-20DU-C",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "F": 5.422459539743449,
+    "K": 5.5,
+    "DU": 20,
+    "DI_aa": 0.1065,
+    "sigma": 0.14
+   },
+   "entradas_gbs": {
+    "S": 5.422459539743449,
+    "K": 5.5,
+    "T": 0.07936507936507936,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "sigma": 0.14,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 0.05224030902576634,
+    "preco_gk_mesmo_caso": 0.052240309025766214,
+    "delta": 0.3638884688672695,
+    "gamma": 1.746381959240985,
+    "vega": 0.5705442950973321,
+    "theta_ano": -0.49793325076406975,
+    "theta_du": -0.001975925598270118,
+    "rho": -0.004146056271886217
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "F = S·e^{(r-q)T} do caso B3-DOL-GK-20DU (paridade coberta de juros). O preço do Black-76 tem de ser igual ao do GK (diferença < 1e-15). As gregas mudam de referência: delta e gamma são em F, e o rho mede só o desconto com F fixo."
+  },
+  {
+   "id": "B3-DOL-B76-EQUIV-20DU-P",
+   "grupo": "preco_gregas",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "F": 5.422459539743449,
+    "K": 5.5,
+    "DU": 20,
+    "DI_aa": 0.1065,
+    "sigma": 0.14
+   },
+   "entradas_gbs": {
+    "S": 5.422459539743449,
+    "K": 5.5,
+    "T": 0.07936507936507936,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "sigma": 0.14,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "preco": 0.12916046686243782,
+    "preco_gk_mesmo_caso": 0.12916046686243804,
+    "delta": -0.6281118053401931,
+    "gamma": 1.746381959240985,
+    "vega": 0.5705442950973321,
+    "theta_ano": -0.490148786141952,
+    "theta_du": -0.0019450348656426667,
+    "rho": -0.01025083070336808
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "F = S·e^{(r-q)T} do caso B3-DOL-GK-20DU (paridade coberta de juros). O preço do Black-76 tem de ser igual ao do GK (diferença < 1e-15). As gregas mudam de referência: delta e gamma são em F, e o rho mede só o desconto com F fixo."
+  },
+  {
+   "id": "IV-HULL-15.11",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 21.0,
+    "K": 20.0,
+    "T": 0.25,
+    "r": 0.1,
+    "q": 0.0,
+    "preco": 1.875
+   },
+   "entradas_gbs": {
+    "S": 21.0,
+    "K": 20.0,
+    "T": 0.25,
+    "r": 0.1,
+    "b": 0.1,
+    "preco": 1.875
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 1.4938017594333466,
+    "limite_superior": 21.0,
+    "sigma": 0.2345129139976438,
+    "vega_em_sigma": 3.3062351841372664
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "publicado+calculado",
+    "referencia": "J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL), cap. 15, seção Implied Volatilities (exemplo iterativo)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04",
+    "publicado": {
+     "sigma": 0.235
+    },
+    "tolerancia_publicado": {
+     "sigma": 0.0005
+    }
+   },
+   "nota": "Hull: sigma = 0,20 dá 1,76 e sigma = 0,30 dá 2,10; a vol implícita é 23,5 %."
+  },
+  {
+   "id": "IV-HAUG-B76-PUBLICADO",
+   "grupo": "vol_implicita",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "HAUG",
+   "entradas": {
+    "tipo": "C",
+    "F": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "preco": 1.7011
+   },
+   "entradas_gbs": {
+    "S": 19.0,
+    "K": 19.0,
+    "T": 0.75,
+    "r": 0.1,
+    "b": 0.0,
+    "preco": 1.7011,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 17.627126240242504,
+    "sigma": 0.2800081506922507,
+    "vega_em_sigma": 6.045468492061426
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL) (preço publicado do Black-76)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Inverte o preço publicado de 4 casas; a vol volta perto de 0,28, mas não exatamente."
+  },
+  {
+   "id": "IV-B3-REF-C",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 0.5646945184011872,
+    "sigma_origem": 0.35
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 0.5646945184011872
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": 0.35000000000000003,
+    "vega_em_sigma": 3.0416656803909503
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Preço do caso B3-ACAO-REF-21DU com precisão total; deve voltar 0,35."
+  },
+  {
+   "id": "IV-B3-REF-P",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 2.2959576247982336,
+    "sigma_origem": 0.35
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 2.2959576247982336
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 1.7312631063970465,
+    "limite_superior": 31.731263106397048,
+    "sigma": 0.35,
+    "vega_em_sigma": 3.0416656803909503
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Idem, put."
+  },
+  {
+   "id": "IV-B3-TICK-C",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 0.56
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 0.56
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": 0.3484555499416165,
+    "vega_em_sigma": 3.0375363875003907
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prêmio arredondado no tick de R$ 0,01."
+  },
+  {
+   "id": "IV-ITM-C-MODERADO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 100.0,
+    "K": 70.0,
+    "T": 0.25,
+    "r": 0.1,
+    "q": 0.0,
+    "preco": 31.74987719392216,
+    "sigma_origem": 0.3
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 70.0,
+    "T": 0.25,
+    "r": 0.1,
+    "b": 0.1,
+    "preco": 31.74987719392216
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 31.728306158016714,
+    "limite_superior": 100.0,
+    "sigma": 0.2999999999999997,
+    "vega_em_sigma": 0.6454518442271818
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "caso sintético, sem fonte externa (parâmetros escolhidos para o teste)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Call muito dentro do dinheiro (d1 ~ 2,6); vega ainda razoável."
+  },
+  {
+   "id": "IV-ITM-C-EXTREMO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 100.0,
+    "K": 50.0,
+    "T": 0.25,
+    "r": 0.1,
+    "q": 0.0,
+    "preco": 51.23450440517699,
+    "sigma_origem": 0.25
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 50.0,
+    "T": 0.25,
+    "r": 0.1,
+    "b": 0.1,
+    "preco": 51.23450440517699
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 51.23450439858337,
+    "limite_superior": 100.0,
+    "sigma": 0.24999999628115263,
+    "vega_em_sigma": 9.455730716101664e-07
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-06,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "caso sintético, sem fonte externa (parâmetros escolhidos para o teste)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Mal condicionado: d1 ~ 5,8 e vega ~ 1e-6. O valor-tempo é ~1e-8 de um prêmio de ~51; o próprio arredondamento do double do preço já move sigma. Tolerância de sigma relaxada; vale também o critério de repreçar."
+  },
+  {
+   "id": "IV-ITM-P-B3-EXTREMO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 20.0,
+    "K": 34.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 13.608741383378412,
+    "sigma_origem": 0.35
+   },
+   "entradas_gbs": {
+    "S": 20.0,
+    "K": 34.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 13.608741383378412
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 13.608741316978426,
+    "limite_superior": 33.608741316978424,
+    "sigma": 0.35000000005778203,
+    "vega_em_sigma": 5.540965091038706e-06
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-07,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put muito dentro do dinheiro (d1 ~ -5); preço europeu abaixo de K - S."
+  },
+  {
+   "id": "IV-P-ABAIXO-INTRINSECO-VALIDO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 1.95
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 1.95
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 1.7312631063970465,
+    "limite_superior": 31.731263106397048,
+    "sigma": 0.22656368826890955,
+    "vega_em_sigma": 2.4580925688498536
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1,95 < K - S = 2,00, mas > K·e^{-rT} - S = 1,7313: existe vol europeia. Testa se o motor usa o limite descontado e não o intrínseco simples."
+  },
+  {
+   "id": "IV-OTM-C-PROFUNDO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 100.0,
+    "K": 150.0,
+    "T": 0.25,
+    "r": 0.05,
+    "q": 0.0,
+    "preco": 0.02503182685865169,
+    "sigma_origem": 0.3
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 150.0,
+    "T": 0.25,
+    "r": 0.05,
+    "b": 0.05,
+    "preco": 0.02503182685865169
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 100.0,
+    "sigma": 0.3,
+    "vega_em_sigma": 0.7828328686831383
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "caso sintético, sem fonte externa (parâmetros escolhidos para o teste)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Call muito fora do dinheiro (d1 ~ -2,5)."
+  },
+  {
+   "id": "IV-OTM-C-EXTREMO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "HULL",
+   "entradas": {
+    "tipo": "C",
+    "S": 100.0,
+    "K": 200.0,
+    "T": 0.25,
+    "r": 0.05,
+    "q": 0.0,
+    "preco": 1.2132329625780977e-05,
+    "sigma_origem": 0.3
+   },
+   "entradas_gbs": {
+    "S": 100.0,
+    "K": 200.0,
+    "T": 0.25,
+    "r": 0.05,
+    "b": 0.05,
+    "preco": 1.2132329625780977e-05
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 100.0,
+    "sigma": 0.3,
+    "vega_em_sigma": 0.0009448082743238471
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "caso sintético, sem fonte externa (parâmetros escolhidos para o teste)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prêmio ~1e-5. Bem condicionado em sigma se o preço for calculado sem cancelamento."
+  },
+  {
+   "id": "IV-OTM-P-B3",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 22.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 0.016549130983837684,
+    "sigma_origem": 0.5
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 22.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.016549130983837684
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 21.746832616868392,
+    "sigma": 0.5,
+    "vega_em_sigma": 0.24465737919189046
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put muito fora do dinheiro, 21 DU."
+  },
+  {
+   "id": "IV-1DU-ATM-C",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 30.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "preco": 0.30981817534867034,
+    "sigma_origem": 0.4
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 30.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.30981817534867034
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.01653020596775093,
+    "limite_superior": 30.0,
+    "sigma": 0.4,
+    "vega_em_sigma": 0.7534822158178452
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prazo de 1 dia útil, no dinheiro."
+  },
+  {
+   "id": "IV-1DU-OTM-C-TICK",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 31.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "preco": 0.05
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 31.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.05
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": 0.4371517615508016,
+    "vega_em_sigma": 0.3860846296879742
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 DU, fora do dinheiro, cotada a R$ 0,05: vol alta."
+  },
+  {
+   "id": "IV-1DU-OTM-P-TICK",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 29.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "preco": 0.01
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 29.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.01
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 28.98402080089784,
+    "sigma": 0.31626931419228943,
+    "vega_em_sigma": 0.16613655669746405
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 DU, put fora do dinheiro no tick mínimo."
+  },
+  {
+   "id": "IV-1DU-ITM-C-PERTO-LIMITE",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 29.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "preco": 1.02
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 29.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 1.02
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 1.0159791991021592,
+    "limite_superior": 30.0,
+    "sigma": 0.27048322004636083,
+    "vega_em_sigma": 0.09594492898114611
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 DU, valor-tempo ~0,005 acima do limite S - K·e^{-rT} = 1,0154."
+  },
+  {
+   "id": "IV-VOL-ALTA",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 30.0,
+    "q": 0.0,
+    "DU": 5,
+    "DI_aa": 0.149,
+    "preco": 4.228558587332314,
+    "sigma_origem": 2.5
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 30.0,
+    "T": 0.01984126984126984,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 4.228558587332314
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.08255999744227198,
+    "limite_superior": 30.0,
+    "sigma": 2.5,
+    "vega_em_sigma": 1.657571785142002
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Vol de 250 % (evento), ainda dentro de [0,001; 5]."
+  },
+  {
+   "id": "IV-VOL-BAIXA",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 31.06,
+    "q": 0.0,
+    "DU": 63,
+    "DI_aa": 0.149,
+    "preco": 0.11967566654216137,
+    "sigma_origem": 0.02
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 31.06,
+    "T": 0.25,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.11967566654216137
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": 0.02,
+    "vega_em_sigma": 5.984060704662336
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Vol de 2 % no strike perto do forward (30·1,149^{63/252} = 31,06)."
+  },
+  {
+   "id": "IV-B76-IND",
+   "grupo": "vol_implicita",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "F": 130000.0,
+    "K": 132000.0,
+    "DU": 15,
+    "DI_aa": 0.1065,
+    "preco": 1660.0
+   },
+   "entradas_gbs": {
+    "S": 130000.0,
+    "K": 132000.0,
+    "T": 0.05952380952380952,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "preco": 1660.0,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 129219.2441772049,
+    "sigma": 0.1997039193335768,
+    "vega_em_sigma": 12062.774197316867
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Black-76, prêmio em pontos."
+  },
+  {
+   "id": "IV-GK-DOL",
+   "grupo": "vol_implicita",
+   "modelo": "GARMAN_KOHLHAGEN",
+   "modelo_motor": "GK",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 5.4,
+    "K": 5.5,
+    "DU": 20,
+    "DC": 28,
+    "DI_aa": 0.1065,
+    "cupom_lin_aa": 0.05,
+    "preco": 0.052
+   },
+   "entradas_gbs": {
+    "S": 5.4,
+    "K": 5.5,
+    "T": 0.07936507936507936,
+    "r": 0.10120188050896729,
+    "b": 0.05229691198851464,
+    "preco": 0.052
+   },
+   "saidas_esperadas": {
+    "falha": false,
+    "flags": [],
+    "limite_inferior": 0.0,
+    "limite_superior": 5.3790813503043715,
+    "sigma": 0.13957872528095597,
+    "vega_em_sigma": 0.5703214960884703
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "por_campo": {
+     "sigma": {
+      "abs": 1e-10,
+      "rel": 0.0
+     }
+    },
+    "preco_reprecificado": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    },
+    "nota": "sigma: abs = max(1e-10, 10^ceil(log10(16·eps·M/vega))), com M = o maior dos dois termos da fórmula do preço (call: S·e^{(b-r)T}·N(d1) e K·e^{-rT}·N(d2)) ou o próprio preço. preco_reprecificado: preço do motor no sigma obtido contra o preço de entrada."
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prêmio de R$ 52,000 por US$ 1.000 (0,052 R$/US$)."
+  },
+  {
+   "id": "IV-FALHA-C-ABAIXO-INTRINSECO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 28.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 1.9
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 28.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 1.9
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 2.3222130330765904,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1,90 < S - K = 2,00 < limite S - K·e^{-rT} = 2,3224."
+  },
+  {
+   "id": "IV-FALHA-C-ENTRE-INTRINSECO-E-LIMITE",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 28.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 2.1
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 28.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 2.1
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 2.3222130330765904,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "2,10 > S - K = 2,00, mas < S - K·e^{-rT} = 2,3224: também falha. Pega o motor que compara com o intrínseco simples."
+  },
+  {
+   "id": "IV-FALHA-P-ABAIXO-LIMITE",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 1.5
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 1.5
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 1.7312631063970465,
+    "limite_superior": 31.731263106397048,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1,50 < K·e^{-rT} - S = 1,7313."
+  },
+  {
+   "id": "IV-FALHA-1DU-ABAIXO-LIMITE",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 29.0,
+    "q": 0.0,
+    "DU": 1,
+    "DI_aa": 0.149,
+    "preco": 1.01
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 29.0,
+    "T": 0.003968253968253968,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 1.01
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 1.0159791991021592,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "1 DU: 1,01 > S - K = 1,00, mas < limite 1,0154."
+  },
+  {
+   "id": "IV-FALHA-C-ACIMA-MAXIMO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 28.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 30.01
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 28.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 30.01
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 2.3222130330765904,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Call acima de S·e^{(b-r)T} = 30."
+  },
+  {
+   "id": "IV-FALHA-P-ACIMA-MAXIMO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "P",
+    "S": 30.0,
+    "K": 32.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.1065,
+    "preco": 31.8
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 32.0,
+    "T": 0.08333333333333333,
+    "r": 0.10120188050896729,
+    "b": 0.10120188050896729,
+    "preco": 31.8
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 1.7312631063970465,
+    "limite_superior": 31.731263106397048,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Put acima de K·e^{-rT} = 31,7313."
+  },
+  {
+   "id": "IV-FALHA-PRECO-ZERO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 35.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": 0.0
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 35.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": 0.0
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prêmio zero: o limite inferior é estrito."
+  },
+  {
+   "id": "IV-FALHA-PRECO-NEGATIVO",
+   "grupo": "vol_implicita",
+   "modelo": "BSM_MERTON",
+   "modelo_motor": "BS_B3",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "S": 30.0,
+    "K": 35.0,
+    "q": 0.0,
+    "DU": 21,
+    "DI_aa": 0.149,
+    "preco": -0.01
+   },
+   "entradas_gbs": {
+    "S": 30.0,
+    "K": 35.0,
+    "T": 0.08333333333333333,
+    "r": 0.13889199886661863,
+    "b": 0.13889199886661863,
+    "preco": -0.01
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 0.0,
+    "limite_superior": 30.0,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Prêmio negativo."
+  },
+  {
+   "id": "IV-FALHA-B76-ABAIXO-LIMITE",
+   "grupo": "vol_implicita",
+   "modelo": "BLACK76",
+   "modelo_motor": "BLACK76",
+   "convencao": "B3",
+   "entradas": {
+    "tipo": "C",
+    "F": 130000.0,
+    "K": 125000.0,
+    "DU": 15,
+    "DI_aa": 0.1065,
+    "preco": 4950.0
+   },
+   "entradas_gbs": {
+    "S": 130000.0,
+    "K": 125000.0,
+    "T": 0.05952380952380952,
+    "r": 0.10120188050896729,
+    "b": 0.0,
+    "preco": 4950.0,
+    "nota": "S do GBS = F"
+   },
+   "saidas_esperadas": {
+    "falha": true,
+    "flags": [
+     "FORA_DOS_LIMITES"
+    ],
+    "limite_inferior": 4969.970929892496,
+    "limite_superior": 129219.2441772049,
+    "sigma": null
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Black-76: limite e^{-rT}(F - K) = 4.969,9; 4.950 fica abaixo."
+  },
+  {
+   "id": "TX-TAXA-CONT-1065",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "taxa_cont",
+   "convencao": "B3",
+   "entradas": {
+    "DI_aa": 0.1065
+   },
+   "saidas_esperadas": {
+    "r": 0.10120188050896729
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "r = ln(1 + DI): taxa contínua equivalente à DI base 252."
+  },
+  {
+   "id": "TX-TAXA-CONT-1490",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "taxa_cont",
+   "convencao": "B3",
+   "entradas": {
+    "DI_aa": 0.149
+   },
+   "saidas_esperadas": {
+    "r": 0.13889199886661863
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "r = ln(1 + DI): taxa contínua equivalente à DI base 252."
+  },
+  {
+   "id": "TX-FATOR-DESCONTO-21DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "fator_desconto",
+   "convencao": "B3",
+   "entradas": {
+    "DI_aa": 0.149,
+    "DU": 21
+   },
+   "saidas_esperadas": {
+    "fator_desconto": 0.988492391675836,
+    "fator_periodo": 1.0116415750096515
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "fator_desconto = (1+DI)^(-DU/252) = e^{-rT} com r = ln(1+DI) e T = DU/252."
+  },
+  {
+   "id": "TX-TAXA-DIARIA",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "taxa_diaria",
+   "convencao": "B3",
+   "entradas": {
+    "DI_aa": 0.149
+   },
+   "saidas_esperadas": {
+    "i_d": 0.0005513106415402601
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Taxa por dia útil: (1+DI)^(1/252) - 1."
+  },
+  {
+   "id": "TX-DI-INTERP-21DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "di_interpola",
+   "convencao": "B3",
+   "entradas": {
+    "curva": [
+     [
+      21,
+      0.149
+     ],
+     [
+      63,
+      0.146
+     ]
+    ],
+    "DU": 21
+   },
+   "saidas_esperadas": {
+    "taxa_aa": 0.149,
+    "fator_periodo": 1.0116415750096515
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Interpolação exponencial (flat forward 252) entre os vértices; no vértice devolve a própria taxa."
+  },
+  {
+   "id": "TX-DI-INTERP-42DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "di_interpola",
+   "convencao": "B3",
+   "entradas": {
+    "curva": [
+     [
+      21,
+      0.149
+     ],
+     [
+      63,
+      0.146
+     ]
+    ],
+    "DU": 42
+   },
+   "saidas_esperadas": {
+    "taxa_aa": 0.14674926486573703,
+    "fator_periodo": 1.0230842801925966
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Interpolação exponencial (flat forward 252) entre os vértices; no vértice devolve a própria taxa."
+  },
+  {
+   "id": "TX-DI-INTERP-50DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "di_interpola",
+   "convencao": "B3",
+   "entradas": {
+    "curva": [
+     [
+      21,
+      0.149
+     ],
+     [
+      63,
+      0.146
+     ]
+    ],
+    "DU": 50
+   },
+   "saidas_esperadas": {
+    "taxa_aa": 0.146389556613376,
+    "fator_periodo": 1.0274773716269447
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Interpolação exponencial (flat forward 252) entre os vértices; no vértice devolve a própria taxa."
+  },
+  {
+   "id": "TX-DI-INTERP-63DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "di_interpola",
+   "convencao": "B3",
+   "entradas": {
+    "curva": [
+     [
+      21,
+      0.149
+     ],
+     [
+      63,
+      0.146
+     ]
+    ],
+    "DU": 63
+   },
+   "saidas_esperadas": {
+    "taxa_aa": 0.146,
+    "fator_periodo": 1.034656414122974
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Interpolação exponencial (flat forward 252) entre os vértices; no vértice devolve a própria taxa."
+  },
+  {
+   "id": "TX-CUPOM-CONT-20DU",
+   "grupo": "taxa_b3",
+   "modelo": "CONVENCAO_B3_252",
+   "funcao_motor": "cupom_cont",
+   "convencao": "B3",
+   "entradas": {
+    "cupom_lin_aa": 0.05,
+    "DU": 20,
+    "DC": 28
+   },
+   "saidas_esperadas": {
+    "q": 0.04890496852045265
+   },
+   "tolerancia": {
+    "padrao": {
+     "abs": 1e-10,
+     "rel": 1e-10
+    }
+   },
+   "origem": {
+    "tipo": "calculado",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
+    "data_acesso": "2026-11-04"
+   },
+   "nota": "Cupom cambial linear/360 convertido em taxa contínua base 252 (Manual B3 §2.1)."
+  }
+ ]
+}

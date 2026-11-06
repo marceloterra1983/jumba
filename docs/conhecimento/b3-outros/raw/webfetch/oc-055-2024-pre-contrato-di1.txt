@@ -1,0 +1,7 @@
+FONTE: https://www.b3.com.br/data/files/FF/C5/51/86/158EE810C54843E8DC0D8AA8/OC 055-2024 PRE Contratos FE - Juros (PT).pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 055/2024-PRE, 16/04/2024, Anexo I (DI1).
+PO = 100.000 / (1 + i/100)^(n/252); n = dias úteis entre a data da operação (inclusive) e a data de vencimento (exclusive).
+AD operações do dia: ADt = (PAt − PO) x M x N. Posições anteriores: ADt = [PAt − (PAt−1 x FCt)] x M x N.
+FCt = (1 + DIt−1/100)^(1/252); com mais de um dia útil, produto dos fatores. Taxa DI com até 6 casas.
+Vencimento: "Primeiro Dia de Sessão de Negociação ... do mês de vencimento do contrato"; PA no vencimento = 100.000. Último dia: sessão anterior ao vencimento. Feriado extraordinário: postergado.

@@ -1,0 +1,5 @@
+# Fontes: https://t.me/s/mapadeopcoes?q=Max+Pain e https://t.me/s/mapadeopcoes?q=BGT — acesso 2026-11-04 via WebFetch (busca do próprio canal)
+q=Max Pain → 2 mensagens: 1745 e 1812. q=BGT → 1 mensagem: 1812.
+1745 (14:05, 441 views) briefing: fluxo estrangeiro positivo, +2 bi em 26JAN; PETR4 "boca de jacaré" no IQ das calls; travas de baixa e fences (possível hedge de fundos long only); "Max Pain do IBOV deslocou"; "Ainda cedo para pensar no trade do final do exercício."
+1812 (11:55, 592 views) beta do novo Payoff no FYT (vídeo YouTube). Recursos: snapshot do mercado, incluindo o book, para uso em outro horário; informações do Jumba Pro dentro do Payoff: "Mínimo, máximo e Flip do Market Gamma", "BGT", Max Pain; simulação/manipulação de volatilidade e skew por vencimento; "Preço Jumba": "Preço teórico das opções calculado com base na curva de volatilidade."; impacto do spread de entrada e saída; novo formato de Dashboard.
+BGT Bands, Market Gamma Bands: sem ocorrência nessas buscas. Nenhuma definição de BGT ou Max Pain.

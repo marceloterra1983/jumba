@@ -1,0 +1,5 @@
+FONTE: https://www.b3.com.br/data/files/9B/D2/A7/68/CA3BF91094DCD8F9AC094EA8/OC 031-2026 PRE PRORROGACAO PROGRAMA DE FM OPCOES SOBRE ACOES BDRS UNITS ETFS E OPCOES SOBRE ÍNDICES COM VENCIMENTOS MENSAIS_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 031/2026-PRE, 30/07/2026, revoga OC 127/2025-PRE. Programa FM de opções mensais (ações, BDRs, units, ETFs, índices) prorrogado até 26/02/2027. Sem lista nominal de credenciados.
+Atuação: opções individuais em 2 vencimentos obrigatórios (rola no 4º dia útil antes do 1º vencimento); puts PETR4/VALE3 nos trimestrais (jan, abr, jul, out); índices: 6 primeiros vencimentos. Mínimo de 10 minutos dentro dos 30 minutos finais. Parâmetros revistos a cada 3 meses.
+Caminho: Produtos e Serviços > Negociação > Formador de Mercado > Programas – Listados > Opções.

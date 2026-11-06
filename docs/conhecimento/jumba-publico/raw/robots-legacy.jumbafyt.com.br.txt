@@ -1,0 +1,5 @@
+# Fonte: https://legacy.jumbafyt.com.br/robots.txt — acesso 2026-11-04 via WebFetch (verbatim devolvido)
+User-agent: Googlebot / Bingbot: Allow: / ; Disallow: /legacy-masterclass-obrigado
+User-agent: Twitterbot / facebookexternalhit: Allow: /
+User-agent: * Allow: / ; Disallow: /legacy-masterclass-obrigado
+Sitemap: https://secure-seat-landing.lovable.app/sitemap.xml

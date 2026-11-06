@@ -1,0 +1,6 @@
+FONTES: https://www.anbima.com.br/feriados/fer_nacionais/2026.asp ; https://www.anbima.com.br/feriados/fer_nacionais/2027.asp ; https://www.anbima.com.br/feriados/fer_nacionais/2028.asp
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+2026: 01/01 qui Confraternização; 16/02 seg Carnaval; 17/02 ter Carnaval; 03/04 sex Paixão de Cristo; 21/04 ter Tiradentes; 01/05 sex Trabalho; 04/06 qui Corpus Christi; 07/09 seg Independência; 12/10 seg Aparecida; 02/11 seg Finados; 15/11 dom Proclamação; 20/11 sex Consciência Negra; 25/12 sex Natal.
+2027: 01/01 sex; 08/02 seg Carnaval; 09/02 ter Carnaval; 26/03 sex Paixão; 21/04 qua Tiradentes; 01/05 sáb Trabalho; 27/05 qui Corpus Christi; 07/09 ter; 12/10 ter; 02/11 ter; 15/11 seg; 20/11 sáb; 25/12 sáb.
+2028: 01/01 sáb; 28/02 seg Carnaval; 29/02 ter Carnaval; 14/04 sex Paixão; 21/04 sex Tiradentes; 01/05 seg; 15/06 qui Corpus Christi; 07/09 qui; 12/10 qui; 02/11 qui; 15/11 qua; 20/11 seg; 25/12 seg.
+Observação: ANBIMA NÃO lista 24/12 nem 31/12 (dias úteis para contagem de DU, embora sem pregão na B3). Sem termos de uso visíveis.

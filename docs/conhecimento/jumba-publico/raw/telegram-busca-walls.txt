@@ -1,0 +1,15 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=Walls — acesso 2026-11-04 via WebFetch (busca do canal; recorte visível)
+1651 (11:27) sala ao vivo 12/09/2025 09h–11h, Robson Melo: "exemplificando setups com Jumba Walls!"
+1652 (10:38) Morning Call 24/09: "08h30 - Luis Guerra abre com Mapa de Opções, Market Gamma, Shark Positions e cenários do dia."
+1654, 1661, 1666, 1669, 1737 salas ao vivo (setups com Jumba Walls); 1659 sala 03/10/2025 08h50–11h
+1662 (12:24) Morning Call 10/10: mesmo texto 08h30 Luis Guerra
+1679/1684 sala Jumba Trader Flow 04 e 05/11/2025; "nosso rastreador do Smart Money."
+1699 "O dólar respeitou a Jumba Wall de novo e pagou R$ 4.000"
+1712 (17:37) Jumba Pro inclui "Jumba Walls das ações"
+1716 (17:38) Jumba Trader: "conheça as prováveis regiões de suporte e resistência para o pregão, antes mesmo da abertura do pregão."
+1734 (21:12) WIN: MidWall 163.900; "a Jumba Wall em 163.385 pontos."
+1841 (17:18) "Caiu 1.500 pontos até a Jumba Walls do 169.552" (abertura perto de 171 mil)
+1843 (16:18) "Essas linhas pontilhadas são as MidWalls e a linha branca é a Jumba Wall." Dólar topo 5.233, MidWall 5.208
+1856 (13:29) "O investidor exporta nosso indicador proprietário diretamente para o Profit"
+Sem: metodologia de cálculo; quantidade de walls por dia; formato da exportação; horário fixo (só "antes do pregão").
+1660/1729: "Wall Street" (falso positivo).

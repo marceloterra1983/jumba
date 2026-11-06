@@ -1,0 +1,19 @@
+# Fonte: https://jumba.com.br — acesso 2026-11-04 via WebFetch (2 passadas). Texto devolvido pela ferramenta (resumo + citações curtas), não o HTML original.
+
+## Passada 1 — links
+Header/menu: logo https://jumba.com.br/ ; Telegram https://t.me/+wccjD27oNrBlYzcx ; Login https://jumba.com.br/login ; Assinar https://jumba.com.br/produtos
+Conteúdo: #plans (âncora) ; "Por que ser assinante Jumba?" https://youtube.com/watch?v=heCjEQknIak ; WhatsApp https://wa.me/551152971650 ; jumba.com.br/produtos ; (11) 5297-1650 ; suporte@jumba.com.br
+Rodapé: Jumba Knowledge https://jumba.com.br/c/educacional ; Quem Somos https://jumba.com.br/quem-somos ; Gráficos TradingView https://jumba.com.br/tradingview ; Suporte (WhatsApp) ; Novidades "#" (sem URL)
+Redes: https://facebook.com/jumbaoficial ; https://www.instagram.com/jumbaoficial ; https://www.youtube.com/channel/UCb0FRtPh5R9fffP8Ri4KLBw ; https://www.linkedin.com/company/jumbafyt ; https://t.me/+wccjD27oNrBlYzcx
+Ausentes na home: menus "News", "FAQ", "Suporte" com esses nomes; links de blog, glossário, Termos de Uso, Política de Privacidade.
+
+Resumo devolvido: Hero (investidor PF operar com informação dos grandes players); 5 motivos; estatísticas (98%, 94%, 93%, 63%); tabela com 5 planos (Free, Pro, Trader, Insights, FYT); Insights vendido à parte; FYT add-on R$67/mês; FAQ (garantia 7 dias, renovação automática, Telegram, nota fiscal); rodapé: suporte@jumba.com.br, (11) 5297-1650, Barueri-SP.
+
+## Passada 2 — planos, motivos, FAQ
+Tabela de planos: na versão servida, rótulos são placeholders ("Título de exemplo 01", "SubTítulo de exemplo 01/02", "Título de exemplo 02") e preços vazios ("de R$ por R$ /mes", "% OFF").
+Matriz (placeholder): linha1-3 todos ✔; "Título de exemplo 02" Free ✘, demais ✔; última linha Free ✘ Pro ✘, Trader/Insights/FYT ✔.
+Periodicidade: Mensal, Semestral, Anual. Insights: nenhum plano inclui (comprar à parte). Add-on: "+ R$67 / mês" Find Your Trade.
+Motivos: 1 Análise Quant Exclusiva ("pioneira em aplicar e difundir a análise de Market Gamma no Brasil"); 2 Acesso à Área Educacional (nasceu de grupo de estudos); 3 Suporte Direto dos sócios-fundadores; 4 Para Todos os Gostos (iniciante a estruturadas); 5 Sem Tempo? Sem Problemas!
+FAQ: comparar em /produtos; especialista no WhatsApp; garantia 7 dias (e-mail suporte@jumba.com.br com e-mail e CPF); cancelamento após 7 dias só bloqueia renovação; suporte: grupo Telegram, vídeos/textos na área logada, e-mail, WhatsApp; emite nota fiscal.
+Market Gamma: citado como técnica quantitativa. Ativos: "ações, opções ou futuros" (sem lista). "mapeia movimentos feitos por grandes investidores do Brasil e do mundo". Sem horários, sem fonte B3, sem metodologia.
+Pesquisa com assinantes: 98% mais seguros; 94% operam melhor; 93% ganhos mais consistentes; 63% impacto nos lucros de curto prazo (sem amostra/metodologia). Seção Depoimentos vazia.

@@ -1,0 +1,6 @@
+FONTE: https://www.b3.com.br/data/files/D7/A3/54/6B/45E2C91076A8EEB9AC094EA8/OC%20006-2026-VPC%20ALTERACOES%20CONTRATOS%20OPCAO%20DE%20COMPRA%20E%20VENDA%20VENCIMENTOS%20SEMANAIS%20ACAO%20UNIT%20ETF%20BDR_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 006/2026-VPC, 05/02/2026, revoga OC 181-2023-PRE. Opções semanais sobre ações, units, BDRs e cotas de fundos.
+Data de vencimento (Anexo 1, call): "Toda as sextas-feiras do mês, exceto na 3ª sextafeira do mês." "Caso esse dia não seja Dia de Sessão de Negociação, o vencimento ocorrerá na data imediatamente anterior em que houver sessão de negociação"
+Feriado extraordinário: vencimento postergado para o primeiro dia de sessão subsequente.
+Último dia de negociação: "Na Data de Vencimento". Call: europeu ou americano (texto lista os dois). Put: europeu.

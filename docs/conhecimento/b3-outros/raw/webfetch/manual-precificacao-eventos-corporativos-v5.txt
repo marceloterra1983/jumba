@@ -1,0 +1,4 @@
+FONTE: https://www.b3.com.br/data/files/2C/B0/39/4D/AFA538101E311E28AC094EA8/Manual%20de%20Eventos%20Corporativos.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Manual de Precificação de Eventos Corporativos, versão 5 (09/01/2023). Calcula preço ex (insumo para ajuste do strike); não traz a regra de ajuste das opções.
+Dinheiro: Pcom = Pex + X. Bonificação: Pcom = Pex x (1 + B). Desdobramento/grupamento: Pcom = Q x Pex. Subscrição: Pex = (Pcom + w·K)/(1 + w), se Pcom > K, w = M/N.

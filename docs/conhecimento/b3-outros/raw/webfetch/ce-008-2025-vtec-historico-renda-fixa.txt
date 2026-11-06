@@ -1,0 +1,5 @@
+FONTE: https://www.b3.com.br/data/files/FA/A2/31/7C/9389A9105B12E5A9AC094EA8/CE%20008-2025-VTEC_MELHORIA%20NO%20ACESSO%20AOS%20DADOS%20HISTORICOS%20DE%20RENDA%20FIXA%20NO%20SITE%20B3_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+CE 008/2025-VTEC, 18/11/2025. Em 15/12/2025 o site estatisticas.cetip.com.br (Séries Históricas de Renda Fixa) foi desativado; dados foram para o Boletim Diário do Mercado.
+DI PRÉ – Over: Boletim Diário > Indicadores e Informativo > Taxas – DI PRÉ – Over.
+Anexo 2 (só consulta histórica): DI – Taxas – Over 06/03/1986 a 11/12/2025; DI – Taxas – 30 dias 18/08/1999 a 03/05/2010; DI – Índice 02/01/2008 a 11/12/2025; DI – Volume Pré Over 04/07/1994 a 11/12/2025; DI – Estoque 03/08/1999 a 11/12/2025.

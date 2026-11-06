@@ -1,0 +1,4 @@
+FONTE: https://www.b3.com.br/pt_br/dados/hub-de-dados-publicos/
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Hub de links. Itens relevantes: Boletim diário do mercado; Pesquisa por pregão; Empréstimo de ativos (Empréstimos registrados, Histórico de operações); Ações: dividendos e outros eventos corporativos; Mercado à vista (opções): perfil de pessoas físicas, AJUSTE DE PROVENTOS, posições em aberto, séries autorizadas, volatilidade dos ativos; Derivativos: indicadores financeiros, taxas referenciais BM&FBOVESPA, superfície de volatilidade do dólar; Puma: oferta RLP.
+Aviso (trecho literal): "é expressamente vedada a coleta automatizada, inclusive por meio de ferramentas de inteligência artificial". Dados de propriedade exclusiva da B3, consulta informativa, Termos e Condições de Uso.

@@ -1,0 +1,6 @@
+FONTE: https://www.b3.com.br/data/files/AC/C5/E4/D2/A4DE9910F5D34899AC094EA8/OC 045-2025-VPC B3 Novos Vencimentos das Opções Semanais sobre Índice Bovespa_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 045/2025-VPC, 16/10/2025. Início 17/11/2025. Novos vencimentos às segundas, terças, quintas e sextas (quartas já existiam): vencimento todo dia.
+Data de vencimento: "Todos os dias da semana do mês, exceto na data de vencimento coincidente com os Contratos de Opção de Compra e Venda sobre Índice Bovespa ("vencimento mensal"). Caso esse dia não seja Dia de Sessão de Negociação, não haverá vencimento nesta data."
+Feriado extraordinário: postergado para o 1º dia de sessão subsequente. Último dia de negociação: data de vencimento.
+Código: remete ao MPO de Negociação, Título III, Capítulo I, Seção 3, item 3.2 (não lido).

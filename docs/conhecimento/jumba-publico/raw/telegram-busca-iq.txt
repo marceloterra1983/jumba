@@ -1,0 +1,11 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=IQ — acesso 2026-11-04 via WebFetch (busca do canal; 2 passadas)
+560 (16:27) IQ das PUTs "segue o movimento do ativo"
+561 (16:27) "IQ das PUTs e ações PETR4 (linha branca)" — linha branca = preço da ação; IQ como série temporal sobreposta ao preço
+562 (16:27) "IQ de CALLs x VALE3"
+563 (16:28) "IQ de CALL e IQ de PUT seguindo tendências opostas" — IQ calculado separadamente para calls e puts
+564 (16:29) "IQ do Ativo é mais uma das várias ferramentas disponíveis aos assinantes do Jumba PRO"
+573, 628, 635, 697, 765 divulgação do PRO: IQ = "índice de qualidade" do ativo
+1597 (22:36, 940 views) barreiras em PETR4: "quatro strikes de opções com volume descoberto acima de 5 milhões e índice de qualidade (IQ) acima de 1,2"; configuração não vista "há tempos"; link para thread no X da Jumba
+1745 "boca de jacaré" no IQ das calls de PETR4
+1779 IQ "compila o posicionamento de titulares e lançadores nas opções"; cruzamento das linhas / "boca de jacaré" antecede movimento amplo
+IQ Global: sem ocorrência. Sem fórmula publicada.

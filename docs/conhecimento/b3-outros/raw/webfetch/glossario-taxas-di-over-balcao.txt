@@ -1,0 +1,7 @@
+FONTE: https://www.b3.com.br/data/files/6A/F7/3F/35/2654D9101BEEB2D9AC094EA8/Glossario_Taxas_DI_Over_balcao%204.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Glossário do arquivo "DI over" do Boletim Diário do Mercado (Renda fixa > Indicadores e Informativos). v1 dez/2025 (15/12/2025), v2 mar/2026 (consulta passa a ser ano a ano).
+CSV, diário "no fechamento do dia" com dados de D-1. Histórico: últimos 40 anos.
+Colunas: Data referência (DD/MM/AAAA); Número de operações; Volume financeiro; Média (taxa média); Fator diário; Taxa SELIC.
+Taxa DI apurada de forma exponencial, fator diário, base 252 dias úteis.
+Página: https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/boletim-diario-do-mercado/

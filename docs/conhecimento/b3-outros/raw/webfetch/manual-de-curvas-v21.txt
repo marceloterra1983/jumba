@@ -1,0 +1,7 @@
+FONTE: https://www.b3.com.br/data/files/F3/42/AE/8C/1942B9105B12E5A9AC094EA8/Manual%20de%20Curvas_V21.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Manual de Curvas B3, data 12/12/2025 (nome do arquivo diz V21).
+PRE (DI x Pré): insumos TxJuros (taxa CDI referencial do dia t) e TxDI1 (taxa de ajuste de cada vencimento do DI1). Taxa % a.a., 3 casas. Vértice 1 DU = CDI do dia; vértices nos vencimentos do DI1 = taxa de ajuste; demais por Flat Forward 252 (item 1.4.2). Extrapolação: flat forward com penúltimo e último vencimentos.
+Flat forward 252: Taxa(DU) = {[(1+i_a)^(DU_a/252) x ((1+i_p)^(DU_p/252)/(1+i_a)^(DU_a/252))^((DU−DU_a)/(DU_p−DU_a))]^(252/DU) − 1} x 100 (texto parcialmente ilegível; conferir no PDF).
+Calendário de dias úteis: feriados divulgados pela ANBIMA. Outras curvas em base 360.
+Códigos: PRE, SLP, TJP, TFP, TP, TR, TIE, SFR, EST, ZMX, ZUS, ZEU, DIC, DPL, DIM, PTX, EUR, JPY, DOL, DOC, DCL, EUC, YCL, SDE, SGP, SMX, SYD, BRP, INP, SML, CYI, MBR, CYM, VIX, CYX.

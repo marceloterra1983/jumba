@@ -1,0 +1,4 @@
+FONTE: https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/acoes/consultas/dividendos-e-outros-eventos-corporativos/
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Corpo não capturado (página renderizada por JS). Link no rodapé: https://sistemaswebb3-listados.b3.com.br/dividensOtherCorpActPage?language=pt-br
+Aviso de propriedade exclusiva da B3 e de vedação de coleta automatizada, inclusive por IA.

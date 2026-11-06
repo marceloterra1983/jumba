@@ -1,0 +1,14 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=600 — acesso 2026-11-04 via WebFetch (filtrado). Mensagens 576–599 (março, ano provável 2023).
+585 (18:37) "Fence é uma Trava de Baixa de PUTs financiada pela venda de uma CALL fora do dinheiro."; usada por grandes players em queda
+586 Fence com ITUB4; relatório Insights com operação alternativa de risco limitado; "Não recomendamos aos assinantes ficarem descobertos em CALLs vendidas."
+587 "Como Funciona a Fence e como Gerir seus Riscos"
+588 assinantes do Insights "recebem alertas no WhatsApp e por e-mail" na montagem e desmontagem
+589/590 "Vantagens do Jumba Insights"; "Saiba mais em Jumba.com.br/insights"
+591 Aftermarket quinta 20h30
+593 (19:39) "Confira como estão os embolsos para as rolagens de opções vendidas" (vencimento de março)
+594 rolagem CALLs vendidas PETR4: "Na linha do dinheiro estão os melhores embolsos"
+595 rolagem PUTs vendidas PETR4: rolar PUT ITM a partir de certo strike "é necessário pagar"
+596 (19:44) "Tabela de rolagens ATM de PETR4, BBAS3, VALE3" (+ ABEV3, ITUB4, BBDC4, BOVA11) no FYT
+597 "Qual o melhor momento para rolar opções compradas"
+599 Jumba Insights; live tira-dúvidas terça 20h30
+Demais: 576–584, 592, 598

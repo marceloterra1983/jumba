@@ -1,0 +1,6 @@
+FONTE: https://arquivos.b3.com.br/bdi/download/bdi/2024-03-21/BDI_02_20240321.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Seção "Participação dos Investidores": (1) "Investidores no Volume Total da B3", acumulado do mês até D-2 (19/03/2024 no BDI de 21/03), compras e vendas em R$ mil e %, categorias: Institucionais, Instituições Financeiras, Investidor Estrangeiro, Investidores Individuais, Outros.
+(2) Mensal do mês anterior por mercado: Vista, Termo, Opções, Exercícios de Opções, Blocos, Total Geral (R$ e %), atualizado no 2º dia útil do mês.
+Exemplo: Institucionais compras 89.126.068 (13,21%), vendas 87.802.713 (13,01%); Estrangeiro compras 181.705.844 (26,93%), vendas 185.973.917 (27,56%).
+Não há quebra por investidor para futuros (mini índice, dólar, DI).

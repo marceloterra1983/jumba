@@ -1,0 +1,5 @@
+FONTE: https://www.b3.com.br/data/files/57/86/30/A8/4C8D0A105BF9020AAC094EA8/MPO%20da%20Camara%20B3.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+MPO da Câmara B3, capa 22/06/2026; Cap. 7 (Controle de Posições) v38 de 09/03/2026.
+Seção 7.9.1 "Tratamento de eventos corporativos para opções sobre ativos do mercado à vista", páginas 211 a 223. 7.9.6 = futuros de renda variável.
+LIMITAÇÃO: o WebFetch só converte os primeiros 99.356 caracteres do PDF (até a seção 5.1.2.2). O texto da 7.9.1 NÃO foi lido.

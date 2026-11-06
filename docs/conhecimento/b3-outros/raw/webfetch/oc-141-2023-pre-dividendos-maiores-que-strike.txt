@@ -1,0 +1,6 @@
+FONTE: https://www.b3.com.br/data/files/44/41/F8/1E/E90E98101D7C7D98DC0D8AA8/OC 141-2023 PRE Tratamento para Dividendos Superiores ao Strike_Petrobras (PT).pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 141/2023-PRE, 10/08/2023. PETR3/PETR4: provento R$1,149304; com até 21/08/2023, ex em 22/08/2023.
+Séries com strike <= provento: tratamento padrão do Manual não se aplica. Ajuste por fator: PEAj = PE x F (2 casas, arredondado); QTDAj = QTD / F (truncado, 0 casas); F arredondado na 8ª casa; F = razão entre Pex (abertura após o evento) e Pcom (fechamento antes) [conferir no original].
+Desbalanceamento comprado/vendido: procedimento de equalização por partes decimais.
+Séries com strike > provento: tratamento do MPO da Câmara B3 inalterado.

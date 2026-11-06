@@ -1,0 +1,4 @@
+# Fonte: https://jumba.com.br/codigo-de-conduta — acesso 2026-11-04 via WebFetch
+"Código de Conduta JUMBA FYT": regula Analistas de Valores Mobiliários da JUMBA FYT (princípios; vedações como conflito de interesse e negociação com valores analisados; independência; normas CVM; informação privilegiada; integridade de mercado; tratamento equitativo; comunicação). Referência: Resolução CVM nº 20, de 25/02/2021. Sem data/versão própria.
+Sem trechos sobre uso automatizado, robôs, scraping, prints, engenharia reversa, Telegram ou penalidades a usuários. Único trecho próximo: Art. 6 "é vedada a utilização de trabalhos, conceitos, textos, números ou qualquer material produzido por terceiros" (aplica-se aos analistas).
+Política de privacidade: sem link; só aviso de cookies sem hiperlink.

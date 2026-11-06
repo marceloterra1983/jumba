@@ -1,0 +1,4 @@
+FONTE: https://www.b3.com.br/data/files/32/D2/D3/FF/09886910B57CA369AC094EA8/OC%20009-2025-VPC%20Opcoes%20sobre%20Acoes%20BDRs%20Units%20e%20ETFs%20e%20Indices.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 009/2025-VPC, 30/04/2025. Processo de credenciamento FM opções mensais + puts PETR4/VALE3 + combo; até 12 FMs. Início 02/06/2025. Sem nomes de instituições.
+Descontos: BOVA11/PETR4/VALE3 85% nas opções e 25% delta hedge isento; demais 100% e 50%.

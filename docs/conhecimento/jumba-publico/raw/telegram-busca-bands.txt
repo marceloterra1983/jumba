@@ -1,0 +1,16 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=Bands — acesso 2026-11-04 via WebFetch (busca do canal; 2 passadas)
+723 (19:29) "Conheça a nova ferramenta Jumba" — Market Gamma Bands (lançamento)
+725/726/727 (19:30) "Market Gamma Bands de IBOV" / "de PETR4" / "de BBAS3"
+729 "Querem ver o Market Gamma Bands de outros ativos?"
+765 (23:04) "Temos ainda o Market Gamma Bands que mostra dentro de um exercício, prováveis regiões de suporte e resistência" ... "conforme o ativo está próximo do mínimo negativo do Market Gamma e nas proximidades da linha superior (máximo do gamma)."; Market Gamma "indica como provavelmente estão posicionados os Market Makers" e como reagiriam ao movimento de preço
+790 (20:15) RAIL3 "tocou na banda superior do gamma positivo, no último pregão"; "linhas verde (máximo) e vermelha (mínima)"; "dificilmente o ativo sai fora das linhas"; "Será mais uma indicação de topo?"
+791 mesma definição do 765 (+ link desconto)
+823/990/1045/1712 listas de ferramentas do PRO incluindo "Market Gamma Bands"
+840 (18:57) "faixa de suporte na faixa dos R$ 61" e "resistência próxima dos R$ 74" (ativo não nomeado)
+929 (13:00) a ferramenta "mostra quais ativos estão no mínimo do gamma e podem estar próximos de formar fundo"; "uma possibilidade de reverter sua tendência" (cupom FLUXO)
+938/953 só título
+1047 Bands e Market Gamma "foram exemplificados nas mensagens logo acima"
+1103 (14:49) "mostra o histórico do máximo do gamma (linha verde) e o mínimo do gamma (linha vermelha)"; "O preço do ativo raramente rompe essas linhas"
+1119 (18:22) live Jumba News PETR4, capítulo "16:23 Market Gamma Bands"
+1402 (13:13) "Excelentes oportunidades de trades quando o ativo se aproxima dos extremos" (mínimo do gamma negativo / máximo do gamma positivo)
+Sem: fórmula, período do histórico, exportação para o Profit nas mensagens.

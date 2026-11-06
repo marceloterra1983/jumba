@@ -1,0 +1,9 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=PCR — acesso 2026-11-04 via WebFetch (busca do canal)
+547 (19:29) PCR capta sentimento sobre um ativo a partir das opções; leitura contrária: "Quando todos estão eufóricos com uma alta, é provável que estejamos próximos de marcar topo"; quem compra PUT por medo está "pagando caro por proteção" que tende a perder valor em poucas semanas
+555, 573, 635 PRO: PCR é "um dos indicadores de sentimento do mercado"
+566/567 live ter 28/02 20h30 "Como interpretar o Put Call Ratio (PCR)" (ano provável 2023)
+628 "Inclui ainda o gráfico" (PCR é um gráfico)
+940 "Put Call Ratio (PCR): indicador de sentimento do mercado"
+1047 (15:04) PCR "demonstra o sentimento dos investidores, se estão buscando mais ou menos proteção via opções de venda"
+603, 619, 689, 697, 765, 791, 823, 990, 1184, 1712 listas de ferramentas
+Sem fórmula (OI vs volume; quantidade vs financeiro), sem valores de referência, sem janela. Por ativo ("cada ativo").

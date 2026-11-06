@@ -1,0 +1,6 @@
+FONTE: https://www.b3.com.br/data/files/05/A1/CA/C2/EFE2C91076A8EEB9AC094EA8/OC%20007-2026-VPC%20ALTERACOES%20CONTRATOSTERMO%20OPCOES%20ACOES%20UNITS%20ETFS%20BDRS%20FUTURO%20ACOES%20UNITS%20REPUBLICACAO%20CONTRATOS%20DERIVATIVOS%20EQUITIES.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 007/2026-VPC, 05/02/2026, revoga OC 040/2025-VPC. Anexos 2 (call) e 3 (put) sobre ações/units/ETFs/BDRs (mensais).
+Data de vencimento: "Terceira sexta-feira do mês de vencimento." Se não houver sessão: "o vencimento ocorrerá na data imediatamente anterior em que houver sessão de negociação". Feriado extraordinário: postergado para o 1º dia de sessão subsequente. Meses: todos.
+Último dia de negociação: "Na data de vencimento." Call: europeu ou americano; put: europeu. Exercício automático no vencimento se ITM; titular pode bloquear.
+Cláusula 5 (eventos): a B3 "poderá ajustar o preço de exercício e a quantidade em valor equivalente ou proporcional ao evento corporativo"; detalhes no MPO da Câmara B3. Prêmio truncado na 2ª casa decimal.

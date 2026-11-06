@@ -1,0 +1,11 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=Shark — acesso 2026-11-04 via WebFetch (busca do canal)
+947 (20:45) Shark Positions acessível a PF: "as operações mais relevantes dos tubarões do mercado"
+955 título "Shark Positions"
+976 (14:06) Shark Map, Shark Positions, Market Gamma e Mapa de Opções "fazem parte da assinatura Jumba PRO"
+995 "Shark Positions: Booster para Dezembro"
+1045 (21:23) Shark Map = "maiores operações executadas na B3, em tempo real"; Shark Positions identifica estruturas com opções, pontas compradas e vendidas, custo de montagem e gráfico de payoff
+1047 (15:04) live PETR4: "Integração com Shark Map"; "Operações Relevantes de PETR4 nos últimos 30 dias"
+1317, 1605, 1650 morning call: Mapa de Opções, Market Gamma, Shark Positions e cenários do dia
+1656 (12:48) Shark Map da semana: "estruturas de baixa montadas pelos big players" no setor elétrico (amostra)
+1712 "Shark Map em tempo real" + Shark Positions no PRO
+Sem limiares de tamanho, colunas, filtros, strikes ou quantidades.

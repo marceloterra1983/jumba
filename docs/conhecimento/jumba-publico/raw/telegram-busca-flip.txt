@@ -1,0 +1,13 @@
+# Fonte: https://t.me/s/mapadeopcoes?q=Flip — acesso 2026-11-04 via WebFetch (busca do canal; 2 passadas). Mensagens antigas (78–268 ≈ 2022) e recentes.
+78 (17:27) PETR4 "no entorno do 30,25", região do Flip; Flip = "ponto de transição entre o gamma positivo e negativo"; Formadores de Mercado "acabam levando o papel para esse ponto naturalmente"; sem "porrada forte", "pode ficar estacionada por ali até o final do vencimento"
+91 (16:22) papel "segurou no Gamma Positivo" (segura a volatilidade); tendência de ficar no Flip, "13,81 no início da sexta"; Flip = onde a curva cruza zero; em 10/03 ficou no Flip ou pouco acima; "estabilidade e negociação com baixo volume"
+124 (13:40) IBOV pontos de observação: Put Gamma Wall 104,8k; Flip 116,9k; Call Gamma Wall 123,3k; fechamento anterior 118,3k; abertura 118,3k; atual (10h04) 117,3k
+125 (15:26) Mapa de Opções Jumba "atualiza diariamente todas as séries em aberto (travadas, cobertas e descobertas)" dos ativos mais líquidos da B3 (horário não informado); Market Gamma mostra "se a ação está no cenário de Gamma positivo, Gamma negativo ou nas proximidades do Flip"; Market Makers "se protege das variações do ativo utilizando de Delta Hedge"; influência do gamma maior em ativos com muitas posições abertas e perto do vencimento
+261 (11:22) gamma +/− "não tem correlação com boas oportunidades" para travas; ativo perto do Flip com muita negociação de puts no Shark Map pode cair (abertura de puts leva gamma de ~0 para negativo); em gamma negativo "o movimento tende a ser amplificado pelo Market Maker que deu liquidez"; "O MM não vai ficar vendido em put a descoberto. Ele vende papel junto para zerar o Delta dele (delta hedge)."; "nada é absoluto"; "Gamma negativo: Se entra venda o MM vende junto."
+268 (14:25) Market Gamma mostra o Gamma dos principais ativos da B3; positivo/negativo/próximo do Flip, "ponto de transição"; endereço antigo https://jumba.com.br/gamma-mapa/ (não aberto)
+513 "VALE3 está bem no Flip"
+514 "EQTL3 também está no Flip"; big players apostando na queda "até o vcto de abril"; "Trava de Baixa de PUTs com 4,2 milhões de opções" no fim do pregão (Shark Map)
+1186 "Bradesco próximo do Flip do Market Gamma"
+1223 (20:40) Bradesco "Oscilou em torno do Flip do Market Gamma por 3 semanas"; oportunidades com "Gradiente Linear"
+1786 Flip do IBOV "na faixa entre 188.000 e 189.000 pontos"
+1812 Payoff: "Mínimo, máximo e Flip do Market Gamma"

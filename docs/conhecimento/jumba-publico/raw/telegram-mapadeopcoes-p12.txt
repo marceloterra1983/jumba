@@ -1,0 +1,11 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=1200 — acesso 2026-11-04 via WebFetch (filtrado). Mensagens 1180–1199 (fev/2024 pelas datas no texto).
+1182 (14:48) Bradesco: "A partir das ferramentas do Jumba PRO"
+1183 (14:48) "Barreiras no Mapa de Opções"
+1184 (14:49) "Indicador Put Call Ratio (PCR)"
+1186 (14:49) "Bradesco próximo do Flip do Market Gamma"
+1189 (20:16) Market Makers "reagem às movimentações de preço para ajustar seu delta hedge"; NVIDIA gap +16% qui (22); live 21h
+1191/1192 Aftermarket com Professor Su, qui 29/02 20h30
+1195 "Hoje às 21h na Jumba News Live" (venda coberta de calls)
+1197 "JUMBA PRO"; 1198 "FIND YOUR TRADE (FYT)"
+Demais: 1180, 1181, 1185, 1187, 1188, 1190, 1193, 1194, 1196, 1199
+# Passada 2 (detalhe, mesma URL, cache): 1182/1183/1184/1186 são só títulos. 1189: "Veja como atuam os Formadores de Mercado, como eles reagem às movimentações de preço para ajustar seu delta hedge."; NVIDIA "abriu em gap e disparou 16% no pregão de quinta-feira (22)"; vídeo vinculado "JN 63" (Jumba News): "Os Market Makers, ou formadores de mercado, são participantes do mercado financeiro".

@@ -1,0 +1,13 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=1787 — acesso 2026-11-04 via WebFetch (2 passadas, filtrado). Mensagens 1764–1786.
+1765 (01:57) "A volatilidade implícita de PETR apresentou uma alta relevante hoje."; venda coberta "melhora os prêmios das opções"; Iron Condor, Slide e Booster "passa a oferecer intervalos mais amplos"; "A vol chegou a bater 40% hoje."
+1767 (20:10) "Vols nas alturas!"
+1769/1770/1782 lives Jumba Options 20h30 (volatilidade, prêmio "gordo")
+1771 (20:42) "quando o Market Gamma do IBOV muda de polaridade"; "saindo do campo negativo para o positivo" = sinal de alta; "o índice tende a apresentar recuperação e continuidade no movimento de alta."; pregão abriu em gamma negativo e com a alta o IBOV "provavelmente voltou a operar em Market Gamma positivo" (indica recálculo/leitura intradiária); "um gatilho relevante para um movimento de alta"; PETR4, ITUB, BBDC, BBAS, Vale
+1772 (11:36) "Entramos em Gamma Positivo."; maior probabilidade de pernada de alta
+1773 (10:38) "Permanecemos em Gamma Positivo."; "leve correção de ontem" "é um bom sinal."
+1774 (10:38) fluxo de ontem parecia "uma trava de alta", mais parecido com booster; IBOV "190/195" (mil pontos) "nesse exercício"; "ao topo histórico novamente"; transição do Market Gamma
+1779 (14:09) "Esse indicador é o IQ do ativo"; IQ "compila o posicionamento de titulares e lançadores nas opções"; leitura: "o cruzamento das linhas" ou abertura da "boca de jacaré" → mercado "costuma entrar em um movimento mais amplo para um dos lados"; VALE3: cruzamento com "aparente abertura das linhas favorecendo um movimento de alta"; vendido em calls sofre pressão
+1784 (20:12) "solicitar a B3 para abrir os strikes" (via corretora); vencimento séries D e P: 14:45 / 15:45 / 18:15 / 18:25–18:40; antes das 14:45 recompra não elimina obrigação; depois "zera sua obrigação automaticamente"
+1785 (11:57) calendário de vencimento (mesmos horários)
+1786 (21:29) "o mapa de opções dos principais ativos do IBOV ainda sinaliza um cenário indefinido"; saída "ainda que tímida" de estrangeiro do à vista; "Flip do IBOV, na faixa entre 188.000 e 189.000 pontos", "pode funcionar como uma zona importante para mudança de leitura do fluxo"; PETR4 e PRIO3 estruturas com viés de alta "com volume ainda tímido"; ABEV3 vol "relativamente elevada", diferença acima da média entre venc. maio/26 e jun/26; sugere "THL de 1 mês"; resultado ABEV3 "início de maio"
+Promoções/sem tema: 1764, 1768, 1775, 1778, 1780, 1781, 1783

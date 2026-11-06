@@ -1,0 +1,45 @@
+id: b3-reference-rates
+filename: ~
+filetype: CUSTOM
+description: Taxas referenciais (Mercado de Derivativos - Taxas de Mercado para Swaps)
+calendar: Brazil/ANBIMA
+downloader:
+  function: datetime_download
+  url: https://www.b3.com.br/pesquisapregao/download?filelist=TS%y%m%d.ex_
+  verifyssl: true
+  format: zip
+  args:
+    refdate: Data de referência
+reader:
+  function: curve_read
+  encoding: latin1
+writers:
+  input:
+    partition: refdate
+  staging:
+    function: process_yc
+    partition: curve_name
+    fields:
+      curve_name: character
+      refdate: date
+      forward_date: date
+      cur_days: integer
+      biz_days: integer
+      col1: numeric
+      col2: numeric
+fields:
+- name: refdate
+  description: Data de referência
+  type: date
+- name: curve_name
+  description: Código da curva (PRE, DIC, DOC, DOL, ...)
+  type: character
+- name: cur_days
+  description: Dias corridos
+  type: integer
+- name: biz_days
+  description: Dias úteis (saques)
+  type: integer
+- name: rate
+  description: Taxa teórica (%) na base da curva (252 para PRE/DIC, 360 para DOC, ...)
+  type: number

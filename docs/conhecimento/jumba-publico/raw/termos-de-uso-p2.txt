@@ -1,0 +1,14 @@
+# Fonte: https://jumba.com.br/termos-de-uso — acesso 2026-11-04 via WebFetch (passada 2: cláusulas 2, 6, 12, 13; citações curtas)
+Cl.2 vedações gerais: "A venda, transferência, modificação, engenharia reversa ou distribuição"; "bem como a cópia de textos, imagens ou quaisquer partes nele contido"; "sendo proibido o compartilhamento"; "os direitos de divulgar, sublicenciar ou, de outra forma, transferir o acesso".
+Cl.2 "Também não é permitido ao USUÁRIO":
+ 1. "PRINTS DE TELA" "sem prévia autorização" e "sem menção a origem do site JUMBA.COM.BR"
+ 2. "O acesso sem que seja feito através de um navegador como Google Chrome"
+ 3. "por ferramentas próprias ou de terceiros com a finalidade de baixar os dados" ... "para uma base de dados, planilha ou qualquer outro tipo armazenamento"
+ 4. "A divulgação dos dados das Ferramentas" ... "que podem competir com a própria Plataforma"
+ 5. "Qualquer tipo de ação que prejudique o acesso, a comercialização"
+Consequências: "Suspender ou excluir sua Conta de Usuário e seus Dados de Usuário"; "optar por rescindir todo este contrato"; suspensão "sem ônus e sem aviso prévio".
+Uso profissional: vedado a "perfil de uso profissional" (critérios CVM e/ou B3): "pessoas jurídicas (sob qualquer condição)"; "pessoas físicas que prestam serviços relacionados à atividade de intermediação de operações"; quem "exploram o sistema com propósitos comerciais e/ou profissionais".
+Palavras robô/automação/API/scraping/Profit: não aparecem no documento (segundo a ferramenta).
+Cl.6 "Do uso das informações de Mercado": 1 "A JUMBA FYT não endossa ou aprova as Informações do Mercado", "não são aconselhamentos ou sugestões de investimento"; 2 "pode tornar-se rapidamente não confiável", "poderá interromper a oferta de informações de mercado"; 3 "não serão responsáveis, de qualquer forma, pelo encerramento, interrupção, atraso ou imprecisão"; 4 "não redistribuirá ou facilitará a redistribuição de informações do mercado" "a qualquer pessoa que não esteja autorizada". Dados em tempo real: Cedro Technologies, "podendo sua prestação de serviços ser substituída". Preços "podem não ser exatos e podem diferir dos preços de mercado".
+Cl.12: 1 "Multa correspondentes a 12 (doze) mensalidade última vigente", "juros moratórios de 1% a.m."; 2 "01 (uma) mensalidade per capita de cada membro do grupo"; geral "03 (três) mensalidades", prazo "de até 20 (vinte)" dias.
+Cl.13: "É vedado ao usuário a cópia, reprodução ( em todo ou parte )"; "dividir os custos dos relatórios e assinaturas"; "Crime de violação de Direito Autoral previsto no Código Penal Art. 184"; "O USUÁRIO não pode utilizar quaisquer Marcas da JUMBA FYT"; aceite eletrônico válido.

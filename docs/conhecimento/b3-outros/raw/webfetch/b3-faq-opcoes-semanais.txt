@@ -1,0 +1,8 @@
+FONTE: https://www.b3.com.br/data/files/55/83/20/ED/CE98D8103152D4C8AC094EA8/B3%20Opcoes%20Semanais%20-%20Perguntas%20Frequentes.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Semanais de ações/ETFs: vencem todas as sextas-feiras do mês, exceto a 3ª sexta (dia do vencimento mensal).
+Ticker AAAABCCCWn; Wn = n-ésima sexta-feira do mês (n=1..5); não existe W3. Exercício: acrescenta "E" no fim.
+Exemplos: B3SAA300W1 (call, 1ª sexta de jan), B3SAM300W2 (put, 2ª sexta de jan), B3SAC45W4 (call, 4ª sexta de mar), B3SAO275W5 (put, 5ª sexta de mar), B3SAO275W5E (exercício).
+15 ativos iniciais: ABEV3, B3SA3, BBAS3, BBDC4, BHIA3, BOVA11, BOVV11, GGBR4, HAPV3, ITUB4, MGLU3, NTCO3, PETR4, SUZB3, VALE3.
+Primeiro vencimento cadastrado: 09/02/2024 (W2). B3 cadastra 5 semanas seguidas, limite de 10 semanas para abertura de séries.
+Horários de exercício = mensais (OC 001-2024-VNC). Semanais de Ibovespa: não liberadas no lançamento (depois vieram: OC 045-2025-VPC).

@@ -1,0 +1,5 @@
+FONTE: https://www.b3.com.br/data/files/6C/B4/07/0B/F996D910973186D9AC094EA8/OC%20017-2026-VPC%20NOVOS%20VENCIMENTOS%20DOS%20MINI%20CONTRATOS%20DE%20OPCOES%20SEMANAIS%20DE%20DOLAR_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+OC 017/2026-VPC, 07/04/2026, revoga OC 072/2018-PRE. Vale a partir de 04/05/2026. Código WDT, USD 10.000, europeu, multiplicador 10, tick R$0,001 por USD 1.000.
+Objeto: PTAX venda (BCB). Fixing: qualquer dia útil com sessão no mês (Res. CMN 4.880/2020). Vencimento: "Dia de sessão de negociação imediatamente posterior à data de fixing". Último dia de negociação: data de fixing.
+Liquidação financeira D+1 do vencimento. Call VL = [(TC x 1.000) − PE] x M x N; Put VL = [PE − (TC x 1.000)] x M x N.

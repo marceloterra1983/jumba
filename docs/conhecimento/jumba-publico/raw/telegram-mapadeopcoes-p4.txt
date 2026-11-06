@@ -1,0 +1,12 @@
+# Fonte: https://t.me/s/mapadeopcoes?before=1828 — acesso 2026-11-04 via WebFetch. Mensagens 1808–1827.
+1808 Quick Trade semana 06–10/07: 5 recomendações, 1 stop, "+R$ 1.610 em 5 dias"; BOVA11 CALL, CSNA3 PUT; cupom QUICK10
+1809 (12:03) vencimento séries G e S: exercício manual antecipado até 14:45; negociação até 15:45; automático 18:15; aftermarket 18:25–18:40; "Todas as opções que estiverem ITM (dentro do dinheiro) serão exercidas."
+1810/1811/1814/1816/1817/1823/1825 Mentoria Antifrágil Turma 5 (aula 23/07 20h30; "6 Medos dos Investidores em Opções"; estratégias zero custo; cálculo do movimento esperado)
+1812 (11:55) versão beta do novo Payoff no FYT, com vídeo YouTube. Conteúdo do Payoff de Estruturas (beta): snapshot do mercado com book; mínimo / máximo / Flip do Market Gamma; BGT; Max Pain; volatilidade por vencimento; "Preço Jumba"; spread de entrada e saída. "Dashboard": primeira ferramenta nesse formato, vários painéis abertos ao mesmo tempo. Market Gamma, BGT e Max Pain vêm do Jumba Pro.
+1818 "O IBOV parece estar num ponto de decisão."
+1819 BOVA11 estrutura 180/185/190 venc. 21/08; Spot 175,17; +2σ 191,77; −2σ 152,15; break-evens 180,61 e 194,39; débito ~R$600; lucro máx ~R$4.400 em 185–190; cone −2σ/Spot/+2σ "a partir da volatilidade implícita" até o vencimento
+1821 "Não estamos apostando num rompimento explosivo nem em tail event"; slide "Conteúdo de estudo, não é recomendação"
+1822 payoff + gráfico BOVA11 + cone +2σ
+1826 DI e Índice Futuro: topo ~181.200, correção até ~178.800; DI e índice em direções opostas
+1827 DI e Dólar Futuro: "máxima em 5.140", saindo de 5.121; dólar acompanha alta de juros
+Links: jumba.com.br/quick-trade?coupon=QUICK10; mentoria-antifragil.jumbafyt.com.br; Instagram; wa.me

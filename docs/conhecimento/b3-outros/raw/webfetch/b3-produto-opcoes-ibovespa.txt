@@ -1,0 +1,3 @@
+FONTE: https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/opcoes-sobre-ibovespa.htm
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+Objeto IBOV. Ponto = R$ 0,01 (contrato reduzido). Tick 5 pontos. Estilo europeu. Vencimento: quarta-feira mais próxima do dia 15 do mês de vencimento. Último dia de negociação = vencimento. Sem sessão no vencimento: passa para a próxima sessão. Todos os meses. Exercício automático se ITM.

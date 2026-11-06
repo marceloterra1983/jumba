@@ -1,0 +1,3 @@
+FONTE: https://www.anbima.com.br/informacoes/est-termo/CZ.asp
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+ETTJ ANBIMA: curvas ETTJ PRE, ETTJ IPCA e inflação implícita (% a.a./252), vértices 252 a 8.316 DU; parâmetros Svensson (Beta1..Beta4, Lambda1, Lambda2) para PRE e IPCA; taxas prefixadas pela Circular 3.361 (vértices 21 a 2.520); erro título a título (LTN, NTN-F, NTN-B). Downloads XLS, CSV, TXT, XML. Data exibida: 03/11/2026. Sem aviso de termos/coleta visível no texto lido.

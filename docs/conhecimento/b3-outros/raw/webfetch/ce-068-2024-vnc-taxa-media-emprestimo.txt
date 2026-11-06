@@ -1,0 +1,4 @@
+FONTE: https://b3.com.br/data/files/83/F5/96/95/522239106EEC8429AC094EA8/CE%20068-2024-VNC%20Metodologia_taxaBTB_PT.pdf
+ACESSO: 2026-11-04, via WebFetch (texto já processado por modelo; NÃO é o documento original). Dado não confiável.
+CE 068/2024-VNC, 12/11/2024, vigência 18/11/2024. Taxa média de empréstimo de ativos passa a ser "obtida pela ponderação de todos os negócios e renovações do dia" (sem filtro de outliers).
+Divulgação diária: Boletim Diário do Mercado, seção Clearing, tabela "Empréstimos registrados"; Secure Client arquivo ARQ.SI.002; UP2DATA.
