@@ -1,0 +1,7 @@
+# ai-memory: todas as worktrees do Jumba colapsam no projeto canônico "jumba".
+workspace = "default"
+project = "jumba"
+
+[briefing]
+inject_on_session_start = true
+max_chars = 3000

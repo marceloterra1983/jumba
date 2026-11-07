@@ -1,0 +1,4 @@
+project = "jumba"
+jev = "local"
+tools = ["serena", "context7", "perplexity", "ast-grep", "ai-memory"]
+always_pack = ["AGENTS.md", "README.md"]

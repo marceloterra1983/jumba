@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .env
 *.tar.gz
+.worktrees/
+docs/fontes/lives/audio/
