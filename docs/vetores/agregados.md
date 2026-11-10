@@ -1,7 +1,7 @@
 # Vetores de teste: agregados, exposições, níveis e estruturas
 
 - **Data:** 2026-11-04 (data de acesso de todas as fontes citadas; nenhuma página nova foi aberta para gerar estes vetores).
-- **Pasta:** `/mnt/project-files/jumba/vetores/`. Arquivos: `agregados.json` (todos os números, precisão total), este `agregados.md` (resumo legível) e `geradores/gerar_agregados.py`.
+- **Pasta:** `docs/vetores/`. Arquivos: `agregados.json` (todos os números, precisão total), este `agregados.md` (resumo legível) e `geradores/gerar_agregados.py`.
 - **Como regenerar:** `python3 -I geradores/gerar_agregados.py` (só biblioteca padrão). O gerador lê, só para conferência, o JSON de feriados de `../conhecimento/b3-outros/`.
 - **Dados:** todos **sintéticos**. Objeto inventado SINT3, S = 30,00, data-base 04/11/2026. Nenhum número vem de tela de terceiros.
 - **Legenda:** [C] confirmado em fonte; [I] inferência; [S] suposição a testar; [P] proposta de convenção (decisão do Marcelo).
@@ -95,7 +95,7 @@ S = 30,00; DI = 10,65 % a.a.; r = 0,101202; V1 vence em 2026-11-19 (11 DU, 15 DC
 
 ## 1. Max Pain (V1)
 
-Fonte: /mnt/project-files/jumba/conhecimento/metodologia/10-max-pain.md; https://optionalpha.com/learn/max-pain-options (acesso 2026-11-04).
+Fonte: docs/conhecimento/metodologia/10-max-pain.md; https://optionalpha.com/learn/max-pain-options (acesso 2026-11-04).
 
 | X | Dor (R$) | ITM (contratos) | Dor'₋ | Dor'₊ |
 |---|---|---|---|---|
@@ -115,7 +115,7 @@ Fonte: /mnt/project-files/jumba/conhecimento/metodologia/10-max-pain.md; https:/
 
 ## 2. Put/Call Ratio
 
-Fonte: /mnt/project-files/jumba/conhecimento/metodologia/11-pcr.md; https://www.cboe.com/us/options/market_statistics/daily/ (acesso 2026-11-04).
+Fonte: docs/conhecimento/metodologia/11-pcr.md; https://www.cboe.com/us/options/market_statistics/daily/ (acesso 2026-11-04).
 
 | Recorte | OI | Volume | Financeiro | Descoberto | Delta |
 |---|---|---|---|---|---|
@@ -127,7 +127,7 @@ Fonte: /mnt/project-files/jumba/conhecimento/metodologia/11-pcr.md; https://www.
 
 ## 3. Índice de Qualidade (IQ)
 
-Fonte: /mnt/project-files/jumba/conhecimento/metodologia/12-indice-qualidade.md; https://www.clubedopairico.com.br/o-indice-de-qualidade-na-venda-de-opcoes/22810 (acesso 2026-11-04). Dependência de dado: [S] titulares e lançadores viriam de BrrwrQty/LndrQty do arquivo de posições em aberto da B3; não confirmado. Os números aqui são sintéticos.
+Fonte: docs/conhecimento/metodologia/12-indice-qualidade.md; https://www.clubedopairico.com.br/o-indice-de-qualidade-na-venda-de-opcoes/22810 (acesso 2026-11-04). Dependência de dado: [S] titulares e lançadores viriam de BrrwrQty/LndrQty do arquivo de posições em aberto da B3; não confirmado. Os números aqui são sintéticos.
 
 | Recorte | Tipo | Razão de somas (padrão) | Ponderado por OI | Ponderado por descoberto | Fora (sem lançador) |
 |---|---|---|---|---|---|
@@ -153,7 +153,7 @@ Barreiras (descoberto ≥ 5.000, IQ ≥ 1,2, |K/S − 1| ≤ 10 %): SINTV1C31 (I
 
 ## 5. GEX e DEX
 
-Fonte: /mnt/project-files/jumba/conhecimento/metodologia/08-gex-dex.md; https://squeezemetrics.com/monitor/download/pdf/white_paper.pdf, https://spotgamma.com/gamma-exposure-gex/, https://threadreaderapp.com/thread/1489373524066279430.html (acesso 2026-11-04).
+Fonte: docs/conhecimento/metodologia/08-gex-dex.md; https://squeezemetrics.com/monitor/download/pdf/white_paper.pdf, https://spotgamma.com/gamma-exposure-gex/, https://threadreaderapp.com/thread/1489373524066279430.html (acesso 2026-11-04).
 
 **Convenção de sinal explícita:** A (padrão): calls +1, puts −1. B: −1 em tudo. D: s = (coberto − descoberto)/OI. GEX em R$ por 1 % (U3).
 
@@ -278,7 +278,7 @@ O JSON traz, para cada taxa, o % do CDI nas quatro convenções de CDI do perío
 
 Vencimentos ajustados: acoes_mensal_2026_11 = 2026-11-19; acoes_mensal_2026_12 = 2026-12-18; acoes_mensal_2028_04 = 2028-04-20; acoes_semanal_sexta_2026_12_25 = 2026-12-23; acoes_semanal_sexta_2027_01_01 = 2026-12-30; di1_2027_01_primeira_sessao = 2027-01-04.
 
-Conferência: os dias sem pregão e os feriados ANBIMA de 2026 a 2028 batem com `/mnt/project-files/jumba/conhecimento/b3-outros/feriados-b3-2026-2028.json` (sim); os vencimentos batem com `vencimentos-regras.md` (sim). 2027 e 2028 são calendários derivados; a errata OC 041/2026-VNC não foi lida.
+Conferência: os dias sem pregão e os feriados ANBIMA de 2026 a 2028 batem com `/home/marce/Projects/Jumba/docs/conhecimento/b3-outros/feriados-b3-2026-2028.json` (sim); os vencimentos batem com `vencimentos-regras.md` (sim). 2027 e 2028 são calendários derivados; a errata OC 041/2026-VNC não foi lida.
 
 ## 12. Curva DI: flat forward 252
 

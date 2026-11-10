@@ -1,7 +1,7 @@
 # Verificação independente: `agregados.json` e `agregados.md`
 
 - **Data:** 2026-11-04. Verificador cético e independente; nenhuma página web foi aberta.
-- **Objeto:** `/mnt/project-files/jumba/vetores/agregados.json` (versão 1.0.0) e `agregados.md`.
+- **Objeto:** `docs/vetores/agregados.json` (versão 1.0.0) e `agregados.md`.
 - **Veredito: APROVADO COM RESSALVAS.** Nenhuma divergência numérica. As ressalvas são de convenção, de definição e de cobertura (seção 4).
 - **Script próprio:** `/tmp/verifica-agregados/verifica.py`, escrito do zero, só com a biblioteca padrão e N(x) via `math.erfc`. Rodar com `python3 -I /tmp/verifica-agregados/verifica.py`. A saída completa vai para `/tmp/verifica-agregados/resultado.json`.
 - **Quantificação das ressalvas:** `/tmp/verifica-agregados/convencoes.py`, com saída em `convencoes.json`.

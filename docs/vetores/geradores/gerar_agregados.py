@@ -22,8 +22,12 @@ import sys
 
 DATA_ACESSO = "2026-11-04"
 VERSAO = "1.0.0"
-NOTAS = "/mnt/project-files/jumba/conhecimento/metodologia/"
-NOTAS_B3 = "/mnt/project-files/jumba/conhecimento/b3-outros/"
+_AQUI = os.path.dirname(os.path.abspath(__file__))
+_DOCS = os.path.abspath(os.path.join(_AQUI, "..", ".."))
+# Citações e defaults usam caminhos relativos ao repo (portáveis).
+NOTAS = "docs/conhecimento/metodologia/"
+NOTAS_B3 = "docs/conhecimento/b3-outros/"
+NOTAS_B3_FS = os.path.join(_DOCS, "conhecimento", "b3-outros") + os.sep
 
 FONTES = {
     "b3_manual_aprecamento_opcoes": "https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf",
@@ -595,7 +599,7 @@ def caso_quebra_oi():
     ]
     return {
         "descricao": "Identidade Total = Coberto + Travado + Descoberto por série do V1, percentuais e somas por tipo; casos de borda (soma diverge, sem quebra, variação contra D−1).",
-        "nota_metodologica": "/mnt/project-files/jumba/conhecimento/b3-opcoes/02-posicoes-em-aberto.md",
+        "nota_metodologica": "docs/conhecimento/b3-opcoes/02-posicoes-em-aberto.md",
         "fontes": [FONTES["b3_glossario_oi"]],
         "convencoes": {
             "campos_b3": {"oi": "OpnIntrst", "cvrd": "CvrdQty", "blck": "TtlBlckdPos", "ucvrd": "UcvrdQty", "total_alternativo": "TtlPos"},
@@ -1525,7 +1529,7 @@ def render_md(doc):
     a("# Vetores de teste: agregados, exposições, níveis e estruturas")
     a("")
     a(f"- **Data:** {doc['data_acesso_fontes']} (data de acesso de todas as fontes citadas; nenhuma página nova foi aberta para gerar estes vetores).")
-    a("- **Pasta:** `/mnt/project-files/jumba/vetores/`. Arquivos: `agregados.json` (todos os números, precisão total), este `agregados.md` (resumo legível) e `geradores/gerar_agregados.py`.")
+    a("- **Pasta:** `docs/vetores/`. Arquivos: `agregados.json` (todos os números, precisão total), este `agregados.md` (resumo legível) e `geradores/gerar_agregados.py`.")
     a("- **Como regenerar:** `python3 -I geradores/gerar_agregados.py` (só biblioteca padrão). O gerador lê, só para conferência, o JSON de feriados de `../conhecimento/b3-outros/`.")
     a("- **Dados:** todos **sintéticos**. Objeto inventado SINT3, S = 30,00, data-base 04/11/2026. Nenhum número vem de tela de terceiros.")
     a("- **Legenda:** [C] confirmado em fonte; [I] inferência; [S] suposição a testar; [P] proposta de convenção (decisão do Marcelo).")
@@ -1837,7 +1841,7 @@ def main():
     ap = argparse.ArgumentParser()
     aqui = os.path.dirname(os.path.abspath(__file__))
     ap.add_argument("--saida", default=os.path.dirname(aqui))
-    ap.add_argument("--feriados-json", default=NOTAS_B3 + "feriados-b3-2026-2028.json")
+    ap.add_argument("--feriados-json", default=os.path.join(NOTAS_B3_FS, "feriados-b3-2026-2028.json"))
     a = ap.parse_args()
     doc = gera(carrega_feriados(a.feriados_json))
     os.makedirs(a.saida, exist_ok=True)

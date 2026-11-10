@@ -1,7 +1,7 @@
 # Metodologia do motor de opções: índice e convenções em aberto
 
 - **Data:** 2026-11-04 (acesso a todas as fontes citadas nas notas).
-- **Pasta:** `/mnt/project-files/jumba/conhecimento/metodologia/`
+- **Pasta:** `docs/conhecimento/metodologia/`
 - **Base lida antes:**
   - `../../pesquisa/` (fontes-dados, jumba-pro, jumba-trader-fyt, matrix, critic);
   - `../b3-opcoes/` (cadastro, OI, Prêmio de Referência);

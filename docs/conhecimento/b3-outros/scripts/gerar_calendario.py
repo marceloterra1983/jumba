@@ -1,5 +1,5 @@
 """Gera feriados-b3-2026-2028.json e tabela de vencimentos. Não lê nenhum arquivo baixado."""
-import json, sys, datetime as dt
+import json, os, sys, datetime as dt
 from datetime import date, timedelta
 
 DS = ["segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado","domingo"]
@@ -44,7 +44,7 @@ def gerar():
     out = {
       "titulo": "Feriados e dias sem pregão da B3, 2026 a 2028",
       "acesso": "2026-11-04",
-      "pasta": "/mnt/project-files/jumba/conhecimento/b3-outros/",
+      "pasta": "docs/conhecimento/b3-outros/",
       "legenda_status": {
         "oficial": "confirmado em publicação da B3 para o ano",
         "derivado": "B3 ainda não publicou o calendário do ano; datas calculadas pelas regras abaixo e conferidas com a lista de feriados nacionais da ANBIMA. Conferir quando a B3 publicar o ofício (costuma sair em dezembro do ano anterior)."
@@ -114,7 +114,9 @@ def gerar():
 
 if __name__=="__main__":
     o = gerar()
-    json.dump(o, open(sys.argv[1],"w",encoding="utf-8"), ensure_ascii=False, indent=2)
+    aqui = os.path.dirname(os.path.abspath(__file__))
+    dest = sys.argv[1] if len(sys.argv) > 1 else os.path.join(aqui, "..", "feriados-b3-2026-2028.json")
+    json.dump(o, open(dest,"w",encoding="utf-8"), ensure_ascii=False, indent=2)
     for y,v in o["anos"].items():
         print(y, v["status"], "sessões", v["n_sessoes_b3"], "DU anbima", v["n_dias_uteis_anbima"])
         for x in v["sem_pregao"]: print("  ", x["data"], x["dia_semana"], x["nome"], "DUanbima" if x["dia_util_anbima"] else "")

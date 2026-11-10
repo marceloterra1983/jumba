@@ -72,3 +72,10 @@ Fonte: YouTube público. Legenda automática pt (yt-dlp) ou, na live de 05/11 (s
 - ~66 Mercado vale de verdade só a partir de 10h30.
 - ~74–76 Distorção some rápido: "não existe preço errado".
 - ~76–79 Margem B3 explode com marcação a mercado em vol alta.
+
+## Acervo local
+
+- Legendas/transcrições versionadas: `*.txt` (e `*.pt-orig.vtt` quando a live tinha legenda YouTube).
+- A live de 05/11 (`20261106-WgdeaWbWP9M`) veio de Whisper local (sem VTT no YouTube).
+- Áudio bruto em `audio/` (`.m4a`/`.pcm`) **não entra no git** (`.gitignore`); serve só para re-transcrever.
+- Ferramentas: `.tools/vtt2txt.py`, `.tools/stt.py`.

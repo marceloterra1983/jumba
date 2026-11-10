@@ -5,7 +5,7 @@
 - **Ritmo e robots.txt:** uma requisição por site por vez, cada uma levando vários segundos. Conferi o robots.txt de jumba.com.br, hotmart.com, youtube.com e legacy.jumbafyt.com.br (`raw/robots-*`). O do t.me não abriu.
 - **Limite da ferramenta:** o WebFetch não devolve o HTML. Devolve texto já resumido, com citações curtas de até cerca de 125 caracteres. Por isso, `raw/` guarda o **texto que a ferramenta devolveu**, não a página original.
 - **Rotas logadas:** nenhuma foi aberta (`/pro/*`, `/login`, `/register`, `/gamma-mapa/`, `/especializacao-hedges-manejos/entrar`).
-- **Pesquisa anterior:** já lida e não repetida (`/mnt/project-files/jumba/pesquisa/`).
+- **Pesquisa anterior:** já lida e não repetida (`docs/pesquisa/`).
 
 ## Notas: site jumba.com.br
 | Nota | URL | Destaque |

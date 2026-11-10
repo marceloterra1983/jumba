@@ -498,7 +498,7 @@
   },
   "max_pain": {
    "descricao": "Max Pain de um vencimento (V1), cadeia sintética de 10 strikes. Método A = menor valor intrínseco pago aos titulares; método B = menor quantidade de contratos dentro do dinheiro. A cadeia foi montada para os dois métodos darem respostas diferentes.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/10-max-pain.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/10-max-pain.md",
    "fontes": [
     "https://optionalpha.com/learn/max-pain-options"
    ],
@@ -670,7 +670,7 @@
   },
   "pcr": {
    "descricao": "Put/Call Ratio por OI, por volume (quantidade), por financeiro, só descoberto e ponderado por delta; por vencimento e em TODOS (soma de quantidades, não média de razões).",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/11-pcr.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/11-pcr.md",
    "fontes": [
     "https://www.cboe.com/us/options/market_statistics/daily/"
    ],
@@ -835,7 +835,7 @@
   },
   "iq": {
    "descricao": "Índice de Qualidade = titulares ÷ lançadores (contagens de clientes), por série e agregado por tipo (calls e puts separados), por vencimento e global; mais o filtro de barreiras (descoberto alto e IQ alto perto do preço).",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/12-indice-qualidade.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/12-indice-qualidade.md",
    "fontes": [
     "https://www.clubedopairico.com.br/o-indice-de-qualidade-na-venda-de-opcoes/22810",
     "https://b3.com.br/data/files/1E/D1/BA/58/C841B810E9C1AAA8AC094EA8/DerivativesOpenPositionFile%202023.pdf"
@@ -1163,7 +1163,7 @@
   },
   "quebra_oi": {
    "descricao": "Identidade Total = Coberto + Travado + Descoberto por série do V1, percentuais e somas por tipo; casos de borda (soma diverge, sem quebra, variação contra D−1).",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/b3-opcoes/02-posicoes-em-aberto.md",
+   "nota_metodologica": "docs/conhecimento/b3-opcoes/02-posicoes-em-aberto.md",
    "fontes": [
     "https://b3.com.br/data/files/1E/D1/BA/58/C841B810E9C1AAA8AC094EA8/DerivativesOpenPositionFile%202023.pdf"
    ],
@@ -1481,7 +1481,7 @@
   },
   "gex_dex": {
    "descricao": "GEX (gamma exposure) e DEX (delta exposure) por série, por strike, acumulado e total; filtros PROXIMO_V1 e TODOS; três convenções de sinal.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/08-gex-dex.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/08-gex-dex.md",
    "fontes": [
     "https://squeezemetrics.com/monitor/download/pdf/white_paper.pdf",
     "https://spotgamma.com/gamma-exposure-gex/",
@@ -1531,8 +1531,8 @@
       "T": 0.04365079365079365,
       "sigma": 0.42,
       "oi": 500,
-      "preco_bs": 4.161386325938139,
-      "delta": 0.9577365208302353,
+      "preco_bs": 4.161386325938135,
+      "delta": 0.9577365208302352,
       "gamma": 0.03422886922985641,
       "theta_aa": -5.203689625960827,
       "s_A": 1.0,
@@ -1554,7 +1554,7 @@
       "sigma": 0.4,
       "oi": 800,
       "preco_bs": 3.223910791154598,
-      "delta": 0.9123508613584201,
+      "delta": 0.9123508613584203,
       "gamma": 0.06350743702474555,
       "theta_aa": -7.01621831672713,
       "s_A": 1.0,
@@ -1565,7 +1565,7 @@
       "gex_u3_A": 457.25354657816797,
       "gex_u3_B": -457.25354657816797,
       "gex_u3_D": 171.470079966813,
-      "dex_rs_A": 21896.420672602082
+      "dex_rs_A": 21896.420672602086
      },
      {
       "id": "SINTV1C28",
@@ -1575,10 +1575,10 @@
       "T": 0.04365079365079365,
       "sigma": 0.38,
       "oi": 2000,
-      "preco_bs": 2.3436614496307726,
+      "preco_bs": 2.343661449630769,
       "delta": 0.8325641602106975,
       "gamma": 0.10521302903473308,
-      "theta_aa": -9.1272714404287,
+      "theta_aa": -9.127271440428702,
       "s_A": 1.0,
       "s_B": -1.0,
       "s_D": 0.35,
@@ -1597,8 +1597,8 @@
       "T": 0.04365079365079365,
       "sigma": 0.365,
       "oi": 4000,
-      "preco_bs": 1.5698645635753437,
-      "delta": 0.7056145477338693,
+      "preco_bs": 1.56986456357534,
+      "delta": 0.7056145477338692,
       "gamma": 0.15067275246056117,
       "theta_aa": -11.016432179327564,
       "s_A": 1.0,
@@ -1609,7 +1609,7 @@
       "gex_u3_A": 5424.219088580201,
       "gex_u3_B": -5424.219088580201,
       "gex_u3_D": 1898.4766810030706,
-      "dex_rs_A": 84673.74572806433
+      "dex_rs_A": 84673.74572806431
      },
      {
       "id": "SINTV1C30",
@@ -1707,7 +1707,7 @@
       "T": 0.04365079365079365,
       "sigma": 0.36,
       "oi": 8000,
-      "preco_bs": 0.05497826813377027,
+      "preco_bs": 0.05497826813377049,
       "delta": 0.05846926085564817,
       "gamma": 0.05173378243204757,
       "theta_aa": -3.1890662618315786,
@@ -1729,8 +1729,8 @@
       "T": 0.04365079365079365,
       "sigma": 0.37,
       "oi": 25000,
-      "preco_bs": 0.02507130317071593,
-      "delta": 0.028827889733034233,
+      "preco_bs": 0.02507130317071604,
+      "delta": 0.028827889733034236,
       "gamma": 0.02838485260597786,
       "theta_aa": -1.8336346813262256,
       "s_A": 1.0,
@@ -1751,7 +1751,7 @@
       "T": 0.04365079365079365,
       "sigma": 0.42,
       "oi": 22000,
-      "preco_bs": 0.04678354115605887,
+      "preco_bs": 0.04678354115605865,
       "delta": -0.04226347916976477,
       "gamma": 0.03422886922985641,
       "theta_aa": -2.5840387500591864,
@@ -1905,10 +1905,10 @@
       "T": 0.04365079365079365,
       "sigma": 0.35,
       "oi": 1000,
-      "preco_bs": 2.9723358941188316,
+      "preco_bs": 2.972335894118835,
       "delta": -0.8861719998454527,
       "gamma": 0.08783719793187586,
-      "theta_aa": -1.850751368842964,
+      "theta_aa": -1.8507513688429635,
       "s_A": -1.0,
       "s_B": -1.0,
       "s_D": -0.7,
@@ -2103,7 +2103,7 @@
       "T": 0.12301587301587301,
       "sigma": 0.36,
       "oi": 7000,
-      "preco_bs": 0.8947667714887384,
+      "preco_bs": 0.8947667714887366,
       "delta": -0.33351585500967207,
       "gamma": 0.09600925752263212,
       "theta_aa": -4.49613486763226,
@@ -2216,7 +2216,7 @@
        "gex_total_u2": 32924.68084657382,
        "dex_strike_rs": {
         "26.0": 42259.94406449828,
-        "27.0": 45561.68810582862,
+        "27.0": 45561.68810582863,
         "28.0": 140369.20309886523,
         "29.0": 208315.63567983924,
         "30.0": 203047.27430988924,
@@ -2263,9 +2263,9 @@
        "gex_total_u2": -547245.052440117,
        "dex_strike_rs": {
         "26.0": 13527.84843959122,
-        "27.0": 1768.846760624463,
+        "27.0": 1768.8467606244594,
         "28.0": 40461.50387358155,
-        "29.0": 38968.14422371058,
+        "29.0": 38968.144223710595,
         "30.0": 73776.9733897416,
         "31.0": -57816.60204759966,
         "32.0": -67453.13012769545,
@@ -2273,11 +2273,11 @@
         "34.0": 2914.93069924277,
         "35.0": -12880.368307372983
        },
-       "dex_total_rs": -8443.493193540731,
-       "dex_total_unid": -281.4497731180254,
-       "hedge_formador_rs": 8443.493193540731,
+       "dex_total_rs": -8443.49319354072,
+       "dex_total_unid": -281.449773118025,
+       "hedge_formador_rs": 8443.49319354072,
        "dex_atm_2pct_rs": 73776.9733897416,
-       "dex_atm_5pct_rs": 54928.51556585252,
+       "dex_atm_5pct_rs": 54928.51556585253,
        "regime_no_spot": "NEGATIVO"
       },
       "D": {
@@ -2359,7 +2359,7 @@
        "gex_total_u2": 59823.67719446546,
        "dex_strike_rs": {
         "26.0": 42259.94406449828,
-        "27.0": 45561.68810582862,
+        "27.0": 45561.68810582863,
         "28.0": 267017.63830550126,
         "29.0": 378326.5869804196,
         "30.0": 386926.84542397683,
@@ -2406,9 +2406,9 @@
        "gex_total_u2": -704508.9925746638,
        "dex_strike_rs": {
         "26.0": 13527.84843959122,
-        "27.0": 1768.846760624463,
+        "27.0": 1768.8467606244594,
         "28.0": 31088.061328180906,
-        "29.0": 9033.852027192523,
+        "29.0": 9033.852027192537,
         "30.0": 20499.546705215987,
         "31.0": -148678.92342301365,
         "32.0": -112150.47243408523,
@@ -2416,11 +2416,11 @@
         "34.0": 2914.93069924277,
         "35.0": -12880.368307372983
        },
-       "dex_total_rs": -236588.31830178882,
+       "dex_total_rs": -236588.3183017888,
        "dex_total_unid": -7886.277276726294,
-       "hedge_formador_rs": 236588.31830178882,
+       "hedge_formador_rs": 236588.3183017888,
        "dex_atm_2pct_rs": 20499.546705215987,
-       "dex_atm_5pct_rs": -119145.52469060513,
+       "dex_atm_5pct_rs": -119145.52469060512,
        "regime_no_spot": "NEGATIVO"
       },
       "D": {
@@ -2476,7 +2476,7 @@
    "verificacao": {
     "erro_rel_max_gamma_vs_diferencas_finitas": 3.4022137156396884e-07,
     "erro_abs_max_delta_vs_diferencas_finitas": 6.915984684940923e-08,
-    "erro_abs_max_theta_vs_diferencas_finitas": 3.1592595206575425e-09,
+    "erro_abs_max_theta_vs_diferencas_finitas": 3.6021101657013332e-09,
     "vetor_nota_05_gamma_call_S30_K32_DU21": 0.11587297830060764,
     "vetor_nota_05_esperado": 0.115873,
     "confere_nota_05": true
@@ -2484,7 +2484,7 @@
   },
   "gamma_flip": {
    "descricao": "Gamma flip pelo método 1 (varredura de preço com Γ recalculado em cada X, raiz por Brent) e pelo método 2 (troca de sinal do GEX acumulado por strike, interpolação linear). Convenção de sinal A.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/09-gamma-flip-walls.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/09-gamma-flip-walls.md",
    "fontes": [
     "https://spotgamma.com/gamma-exposure-gex/",
     "https://threadreaderapp.com/thread/1489373524066279430.html"
@@ -3095,7 +3095,7 @@
   },
   "walls": {
    "descricao": "Call wall e put wall do V1 por três regras (a: gamma nocional sem sinal por tipo; b: maior OI por tipo; c: GEX com sinal, maior positivo e mais negativo) e duas opções de lado (livre; restrito a K ≥ S para call e K ≤ S para put).",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/09-gamma-flip-walls.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/09-gamma-flip-walls.md",
    "fontes": [
     "https://spotgamma.com/call-wall-put-wall-explained/"
    ],
@@ -3245,7 +3245,7 @@
   },
   "equilibrio_gamma_theta": {
    "descricao": "Movimento de equilíbrio gamma-theta: deslocamento do objeto em que o ganho de gamma de uma posição delta-hedgeada paga o theta do período. Hipótese para a métrica chamada BGT na pesquisa; aqui com nome próprio.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/13-bgt-move.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/13-bgt-move.md",
    "fontes": [
     "https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_equation"
    ],
@@ -3344,7 +3344,7 @@
   },
   "payoff": {
    "descricao": "Payoff no vencimento de estruturas de várias pernas (por unidade do objeto, salvo o lote de 100), breakevens exatos, ganho e perda máximos e indicação de ilimitado.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/especificacao-motor.md (função payoff) e 14-taxa-estruturas-cdi.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/especificacao-motor.md (função payoff) e 14-taxa-estruturas-cdi.md",
    "convencoes": {
     "lado": "+1 comprado, −1 vendido",
     "preco": "prêmio pago (comprado) ou recebido (vendido) por unidade; ação comprada ao preço indicado",
@@ -3907,7 +3907,7 @@
   },
   "taxas_cdi": {
    "descricao": "Taxa contra o CDI de venda coberta, cash put, box de 3 pontas, box de 4 pontas (aplicação e captação) e long collar, a preço executável (compra no ask, venda no bid).",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/metodologia/14-taxa-estruturas-cdi.md",
+   "nota_metodologica": "docs/conhecimento/metodologia/14-taxa-estruturas-cdi.md",
    "fontes": [
     "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/juros/programa-de-treinamento-di/02-taxas-de-juros.htm"
    ],
@@ -3941,12 +3941,12 @@
    },
    "livro": {
     "C26": {
-     "mid_bs": 4.161386325938139,
+     "mid_bs": 4.161386325938135,
      "bid": 4.15,
      "ask": 4.18
     },
     "P26": {
-     "mid_bs": 0.04678354115605887,
+     "mid_bs": 0.04678354115605865,
      "bid": 0.03,
      "ask": 0.06
     },
@@ -3961,7 +3961,7 @@
      "ask": 0.12
     },
     "C28": {
-     "mid_bs": 2.3436614496307726,
+     "mid_bs": 2.343661449630769,
      "bid": 2.33,
      "ask": 2.36
     },
@@ -3971,7 +3971,7 @@
      "ask": 0.24
     },
     "C29": {
-     "mid_bs": 1.5698645635753437,
+     "mid_bs": 1.56986456357534,
      "bid": 1.55,
      "ask": 1.58
     },
@@ -4016,12 +4016,12 @@
      "ask": 0.13
     },
     "P33": {
-     "mid_bs": 2.9723358941188316,
+     "mid_bs": 2.972335894118835,
      "bid": 2.96,
      "ask": 2.99
     },
     "C34": {
-     "mid_bs": 0.05497826813377027,
+     "mid_bs": 0.05497826813377049,
      "bid": 0.04,
      "ask": 0.07
     },
@@ -4031,7 +4031,7 @@
      "ask": 3.92
     },
     "C35": {
-     "mid_bs": 0.02507130317071593,
+     "mid_bs": 0.02507130317071604,
      "bid": 0.01,
      "ask": 0.04
     },
@@ -4395,7 +4395,7 @@
     "box4_livro_sintetico_taxa_negativa": {
      "entradas": {
       "C28": {
-       "mid_bs": 2.3436614496307726,
+       "mid_bs": 2.343661449630769,
        "bid": 2.33,
        "ask": 2.36
       },
@@ -4573,7 +4573,7 @@
   },
   "dias_uteis": {
    "descricao": "Contagem de dias úteis entre datas pelo calendário de pregões da B3 e pelo calendário ANBIMA (24/12 e 31/12 contam como úteis), nas duas regras de borda; datas de vencimento ajustadas por feriado.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/b3-outros/07-feriados-calendario.md e vencimentos-regras.md",
+   "nota_metodologica": "docs/conhecimento/b3-outros/07-feriados-calendario.md e vencimentos-regras.md",
    "fontes": [
     "https://www.b3.com.br/pt_br/noticias/calendario-de-negociacao-da-b3-confira-o-funcionamento-da-bolsa-em-2026.htm",
     "https://www.b3.com.br/data/files/05/A1/CA/C2/EFE2C91076A8EEB9AC094EA8/OC%20007-2026-VPC%20ALTERACOES%20CONTRATOSTERMO%20OPCOES%20ACOES%20UNITS%20ETFS%20BDRS%20FUTURO%20ACOES%20UNITS%20REPUBLICACAO%20CONTRATOS%20DERIVATIVOS%20EQUITIES.pdf",
@@ -4830,7 +4830,7 @@
      "di1_2027_01_primeira_sessao": "2027-01-04"
     },
     "conferencia_com_json_do_projeto": {
-     "json_lido": "/mnt/project-files/jumba/conhecimento/b3-outros/feriados-b3-2026-2028.json",
+     "json_lido": "/home/marce/Projects/Jumba/docs/conhecimento/b3-outros/feriados-b3-2026-2028.json",
      "confere_sem_pregao": true,
      "confere_anbima": true,
      "confere_contagens": true,
@@ -4840,7 +4840,7 @@
   },
   "curva_di": {
    "descricao": "Interpolação exponencial (flat forward 252) da curva pré a partir do CDI (vértice de 1 DU) e de ajustes sintéticos do DI1; extrapolação depois do último vértice com o penúltimo e o último; PU do DI1.",
-   "nota_metodologica": "/mnt/project-files/jumba/conhecimento/b3-outros/01-curva-de-juros.md e /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+   "nota_metodologica": "docs/conhecimento/b3-outros/01-curva-de-juros.md e docs/conhecimento/metodologia/01-convencoes-base.md §3",
    "fontes": [
     "https://www.b3.com.br/data/files/F3/42/AE/8C/1942B9105B12E5A9AC094EA8/Manual%20de%20Curvas_V21.pdf",
     "https://www.b3.com.br/data/files/FF/C5/51/86/158EE810C54843E8DC0D8AA8/OC%20055-2024%20PRE%20Contratos%20FE%20-%20Juros%20(PT).pdf",

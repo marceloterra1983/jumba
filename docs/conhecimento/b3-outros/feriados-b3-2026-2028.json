@@ -1,7 +1,7 @@
 {
   "titulo": "Feriados e dias sem pregão da B3, 2026 a 2028",
   "acesso": "2026-11-04",
-  "pasta": "/mnt/project-files/jumba/conhecimento/b3-outros/",
+  "pasta": "docs/conhecimento/b3-outros/",
   "legenda_status": {
     "oficial": "confirmado em publicação da B3 para o ano",
     "derivado": "B3 ainda não publicou o calendário do ano; datas calculadas pelas regras abaixo e conferidas com a lista de feriados nacionais da ANBIMA. Conferir quando a B3 publicar o ofício (costuma sair em dezembro do ano anterior)."

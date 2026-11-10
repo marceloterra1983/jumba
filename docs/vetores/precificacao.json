@@ -1441,7 +1441,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/05 §3 (6 casas)"
@@ -1496,7 +1496,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/05 §3 (6 casas)"
@@ -1551,7 +1551,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1605,7 +1605,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1659,7 +1659,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1713,7 +1713,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1767,7 +1767,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1821,7 +1821,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1875,7 +1875,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1929,7 +1929,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -1983,7 +1983,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2037,7 +2037,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2090,7 +2090,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/03 §4 (2 casas no preço)"
@@ -2144,7 +2144,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/03 §4 (2 casas no preço)"
@@ -2198,7 +2198,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2251,7 +2251,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2307,7 +2307,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/04 §3 (6 casas)"
@@ -2364,7 +2364,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04",
     "consistencia": "metodologia/04 §3 (6 casas)"
@@ -2412,7 +2412,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2459,7 +2459,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/04-garman-kohlhagen-dolar.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2634,7 +2634,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2691,7 +2691,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2747,7 +2747,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2918,7 +2918,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -2974,7 +2974,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3145,7 +3145,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3202,7 +3202,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3258,7 +3258,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3314,7 +3314,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3370,7 +3370,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3427,7 +3427,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3484,7 +3484,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3540,7 +3540,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3597,7 +3597,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3643,7 +3643,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3689,7 +3689,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3735,7 +3735,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3781,7 +3781,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3827,7 +3827,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3873,7 +3873,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3919,7 +3919,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -3965,7 +3965,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4011,7 +4011,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04)",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4037,7 +4037,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4063,7 +4063,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4091,7 +4091,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4117,7 +4117,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4154,7 +4154,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4191,7 +4191,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4228,7 +4228,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4265,7 +4265,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },
@@ -4293,7 +4293,7 @@
    },
    "origem": {
     "tipo": "calculado",
-    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md §3",
+    "referencia": "B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04); docs/conhecimento/metodologia/01-convencoes-base.md §3",
     "calculo": "geradores/gera_precificacao.py (Decimal, 100 digitos)",
     "data_acesso": "2026-11-04"
    },

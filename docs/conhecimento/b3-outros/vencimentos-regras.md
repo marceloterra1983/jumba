@@ -1,6 +1,6 @@
 # Regras de vencimento das opções na B3
 
-Acesso: 2026-11-04. Pasta: `/mnt/project-files/jumba/conhecimento/b3-outros/`. Os textos lidos estão em `raw/webfetch/` (texto processado pelo WebFetch, não o PDF original).
+Acesso: 2026-11-04. Pasta: `docs/conhecimento/b3-outros/`. Os textos lidos estão em `raw/webfetch/` (texto processado pelo WebFetch, não o PDF original).
 
 Legenda: **[C]** confirmado em documento da B3 lido nesta coleta; **[T]** código de terceiros; **[S]** suposição ou conhecimento não conferido aqui.
 

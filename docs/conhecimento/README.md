@@ -1,9 +1,9 @@
-**QUARENTENA:** `/mnt/project-files/jumba/conhecimento/jumba-publico/` está em QUARENTENA (os termos de uso do Jumba proíbem engenharia reversa e cópia; não usar como fonte). `/mnt/project-files/jumba/vetores/retido/` idem.
+**QUARENTENA:** `docs/conhecimento/jumba-publico/` está em QUARENTENA (os termos de uso do Jumba proíbem engenharia reversa e cópia; não usar como fonte). `docs/vetores/retido/` idem.
 
 # Base de conhecimento do motor de opções: índice geral
 
 - **Montado em:** 2026-11-05. As notas indexadas foram escritas com fontes acessadas em 2026-11-04.
-- **Pasta:** `/mnt/project-files/jumba/conhecimento/`. Os vetores de teste ficam em `/mnt/project-files/jumba/vetores/` (links `../vetores/`). A pesquisa anterior fica em `../pesquisa/` e não é indexada aqui.
+- **Pasta:** `docs/conhecimento/`. Os vetores de teste ficam em `docs/vetores/` (links `../vetores/`). A pesquisa anterior fica em `../pesquisa/` e não é indexada aqui.
 - **Como foi montado:** pastas listadas com `ls` (sem busca recursiva no mount). Foram lidos o `00-indice.md` de `b3-opcoes/`, `b3-outros/` e `metodologia/`, as notas de cada pasta e todos os `.md` de `vetores/`. Nada da quarentena foi aberto.
 - **Legenda:** **[C]** confirmado em documento lido; **[T]** código de terceiros; **[S]** suposição a testar; **[P]** proposta de convenção (decisão do Marcelo); **[Q]** a nota tem trecho que cita a pasta em quarentena. Esse trecho não vale como fonte (ver Lacunas, item 1).
 

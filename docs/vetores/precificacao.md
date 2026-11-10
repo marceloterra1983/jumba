@@ -2,7 +2,7 @@
 
 - **Arquivo de dados:** `precificacao.json` (nesta pasta). **Gerador:** `geradores/gera_precificacao.py`.
 - **Gerado em / data de acesso das fontes:** 2026-11-04.
-- **Como rodar de novo:** `python3 -I geradores/gera_precificacao.py --saida /mnt/project-files/jumba/vetores/`
+- **Como rodar de novo:** `python3 -I geradores/gera_precificacao.py --saida .`  (cwd = docs/vetores/)
   (só biblioteca padrão; não baixa nada).
 - **Total:** 82 casos: 44 de preço e gregas, 29 de vol implícita (20 com solução e 9 que devem falhar), 9 de taxa na convenção B3. 29 valores publicados (Hull e Haug) conferidos.
 - **Legenda:** [C] confirmado na fonte; [I] inferência minha; [P] convenção que escolhi para os vetores (o motor pode ter outra, mas aí o vetor precisa ser convertido).
@@ -95,9 +95,9 @@ Isso segue `../conhecimento/metodologia/01-convencoes-base.md` §1.
 
 - J. C. Hull, Options, Futures, and Other Derivatives, 9a ed., Pearson, 2014 (livro impresso, sem URL).
 - E. G. Haug, The Complete Guide to Option Pricing Formulas, 2a ed., McGraw-Hill, 2007 (livro impresso, sem URL).
-- B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em /mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04).
-- Notas de metodologia usadas para as convenções (lidas em 2026-11-04): `/mnt/project-files/jumba/conhecimento/metodologia/01-convencoes-base.md`, `02-bsm-merton-proventos.md`, `03-black76-futuros.md`, `04-garman-kohlhagen-dolar.md`, `05-gregas-escalas.md`, `06-vol-implicita.md` e `especificacao-motor.md`.
-- Revisão cética: `/mnt/project-files/jumba/pesquisa/critic.md` (item 8, proventos).
+- B3, Manual de Apreçamento - Opções (20/12/2023), §1.1 e §2.1: https://www.b3.com.br/data/files/48/A5/38/D0/CF38C8103152D4C8AC094EA8/Manual%20de%20Apre%C3%A7amento%20-%20Op%C3%A7%C3%B5es%202023-12-20.pdf (citado em docs/conhecimento/metodologia/01-convencoes-base.md, acesso 2026-11-04).
+- Notas de metodologia usadas para as convenções (lidas em 2026-11-04): `docs/conhecimento/metodologia/01-convencoes-base.md`, `02-bsm-merton-proventos.md`, `03-black76-futuros.md`, `04-garman-kohlhagen-dolar.md`, `05-gregas-escalas.md`, `06-vol-implicita.md` e `especificacao-motor.md`.
+- Revisão cética: `docs/pesquisa/critic.md` (item 8, proventos).
 
 ## 6. Casos
 

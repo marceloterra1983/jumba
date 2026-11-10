@@ -1,6 +1,6 @@
 # Arquivos públicos da B3 para opções: índice
 
-Acesso: 2026-11-04. Pasta: `/mnt/project-files/jumba/conhecimento/b3-opcoes/`. Base anterior: `../../pesquisa/fontes-dados.md` e `critic.md`.
+Acesso: 2026-11-04. Pasta: `docs/conhecimento/b3-opcoes/`. Base anterior: `../../pesquisa/fontes-dados.md` e `critic.md`.
 
 Legenda: **[C]** confirmado em documento da B3; **[T]** confirmado em código de terceiros ou do Farol; **[S]** suposição a testar.
 

@@ -1,6 +1,6 @@
 # B3 (outras fontes públicas): índice
 
-Acesso: 2026-11-04. Pasta: `/mnt/project-files/jumba/conhecimento/b3-outros/`. Antes desta pasta, leia `../../pesquisa/fontes-dados.md` e `critic.md`. Sobre cadastro, OI, BDI e Pesquisa por pregão, veja a pasta irmã `../b3-opcoes/`.
+Acesso: 2026-11-04. Pasta: `docs/conhecimento/b3-outros/`. Antes desta pasta, leia `../../pesquisa/fontes-dados.md` e `critic.md`. Sobre cadastro, OI, BDI e Pesquisa por pregão, veja a pasta irmã `../b3-opcoes/`.
 
 Legenda: **[C]** documento da B3 lido nesta coleta; **[T]** código de terceiros; **[S]** suposição a testar.
 

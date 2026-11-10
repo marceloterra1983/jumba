@@ -1,5 +1,5 @@
 {
- "arquivo_alvo": "/mnt/project-files/jumba/vetores/precificacao.json",
+ "arquivo_alvo": "docs/vetores/precificacao.json",
  "gerado_em": "2026-11-04",
  "gerado_por": "verificação independente: /tmp/verifica-precificacao/verifica.py e gera_correcoes.py",
  "resumo": "Nenhum valor numérico de saidas_esperadas, entradas_gbs, limites ou tolerância de sigma está errado (82 casos, 1126 comparações, 0 fora da tolerância). As correções abaixo são de texto (campo nota). As sugestões de tolerância evitam falso negativo; não mudam nenhum valor esperado. O JSON original não foi alterado.",
